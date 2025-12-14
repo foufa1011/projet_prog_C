@@ -7,303 +7,237 @@
 #include "callbacks.h"
 #include "interface.h"
 #include "support.h"
-#include "centre.h"
+#include "equipement.h"
 
 
-int type = 1;
-int activites[] = {0, 0};
+int etat = 1;
 
+//enregister ajout
 void
-on_nl_gestion_centre_ajouter_enregistrer_button_clicked
+on_in_gestion_equipement_ajouter_enregistrer_button_clicked
                                         (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
-	centre c;
-	c.id = 0;
+	equipement e;
+	e.id = 0;
 
-	GtkWidget *nom_input = lookup_widget(objet_graphique, "nl_gestion_centre_ajouter_nomcentre_entry");
-	strcpy(c.nom,gtk_entry_get_text(GTK_ENTRY(nom_input)));
+	GtkWidget *nom_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_nomequipement_entry");
+	strcpy(e.nom,gtk_entry_get_text(GTK_ENTRY(nom_input)));
 
-        GtkWidget *ville_input = lookup_widget(objet_graphique, "nl_gestion_centre_ajouter_localisation_comboboxentry");
-	strcpy(c.ville,gtk_combo_box_get_active_text(GTK_COMBO_BOX(ville_input)));
+        GtkWidget *categorie_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_categorie_comboboxentry");
+	strcpy(e.categorie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(categorie_input)));
 
-	GtkWidget *horaire_ouverture_input = lookup_widget(objet_graphique, "nl_gestion_centre_ajouter_ouverture_spinbutton");
-	c.horaire_ouverture = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(horaire_ouverture_input));
+	GtkWidget *quantite = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_qtdispo_spinbutton");
+	e.quantite = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(quantite));
 
-	GtkWidget *horaire_fermeture_input = lookup_widget(objet_graphique, "nl_gestion_centre_ajouter_fermeture_button");
-	c.horaire_fermeture = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(horaire_fermeture_input));
+	int year, month, day;
 
-	GtkWidget *membre_limit_input = lookup_widget(objet_graphique, "nl_gestion_centre_ajouter_nblimite_spinbutton");
-	c.membre_limit = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(membre_limit_input));
+	GtkWidget *calendar = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_dateachat_calendar");
 
-	c.type = type;
-	c.activites = activites[0] + activites[1];
-	type = 1;
-	activites[0] = 0;
-	activites[1] = 0;
+	gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
 
-	char *fichier = "centre.txt";
-	int result = ajouter(fichier,c);
+	e.etat = etat;
+	etat = 1;
+
+	char *fichier = "equipement.txt";
+	int result = ajouter(fichier,e);
+
 }
 
 
 void
-on_nl_gestion_centre_ajouter_community_radiobutton_toggled
+on_in_gestion_equipement_ajouter_enmaintenance_radiobutton_toggled
                                         (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
 	if(gtk_toggle_button_get_active(togglebutton))
-		type = 1;
+		etat = 3;
 }
 
 
 void
-on_nl_gestion_centre_ajouter_training_radiobutton_toggled
+on_in_gestion_equipement_ajouter_enpanne_radiobutton_toggled
                                         (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
 	if(gtk_toggle_button_get_active(togglebutton))
-		type = 2;
+		etat = 2;
 }
 
 
 void
-on_nl_gestion_centre_ajouter_entrainement_checkbutton_toggled
+on_in_gestion_equipement_ajouter_disponible_radiobutton_toggled
                                         (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
 	if(gtk_toggle_button_get_active(togglebutton))
-	{
-		activites[0] = 1;
-	}
-	else
-		activites[0] = 0;
-}
-
-
-void
-on_nl_gestion_centre_ajouter_defoulement_checkbutton_toggled
-                                        (GtkToggleButton *togglebutton,
-                                        gpointer         user_data)
-{
-	if(gtk_toggle_button_get_active(togglebutton))
-	{
-		activites[1] = 2;
-	}
-	else
-		activites[1] = 0;
+		etat = 1;
 }
 
 int id = 0;
 
+//retrouver information pour modifier
 void
-on_nl_gestion_centre_modifier_rechercher_button_clicked
+on_in_gestion_equipement_modifier_rechercher_button_clicked
                                         (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
-	GtkWidget *id_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_rechercher_entry");
+	GtkWidget *id_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_rechercher_entry");
 	id = atoi(gtk_entry_get_text(GTK_ENTRY(id_input)));
 	
-	char *fichier = "centre.txt";
-	centre c = chercher(fichier, id);
+	char *fichier = "equipement.txt";
+	equipement e = chercher(fichier, id);
 	
-	GtkWidget *nom_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_nomcentre_entry");
-	gtk_entry_set_text(GTK_ENTRY(nom_input), c.nom);
+	GtkWidget *nom_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_nomequipement_entry");
+	gtk_entry_set_text(GTK_ENTRY(nom_input), e.nom);
 
-        GtkWidget *ville_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_ville_comboboxentry");
-	char *fichier2 = "villes.txt";
+        GtkWidget *categorie_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_categorie_comboboxentry");
+	char *fichier2 = "categorie.txt";
 	FILE *f = fopen(fichier2, "r");
-	char ville[100];
+	char categorie[100];
 	int i = 0;
 	if(f!=NULL)
 	{
-		while(fscanf(f, "%s\n", ville) != EOF)
+		while(fscanf(f, "%s\n", categorie) != EOF)
 		{
-			if(strcmp(ville, c.ville) == 0)
+			if(strcmp(categorie, e.categorie) == 0)
 				break;
 			i++;
 		}
 		fclose(f);
 	}
-	gtk_combo_box_set_active(GTK_COMBO_BOX(ville_input), i);
+	gtk_combo_box_set_active(GTK_COMBO_BOX(categorie_input), i);
 
-	GtkWidget *horaire_ouverture_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_horaire_spinbutton");
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(horaire_ouverture_input), c.horaire_ouverture);
+	GtkWidget *quantite_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_qtdispo_spinbutton");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(quantite_input), e.quantite);
 
-	GtkWidget *horaire_fermeture_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_fermeture_spinbutton");
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(horaire_fermeture_input), c.horaire_fermeture);
-
-	GtkWidget *membre_limit_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_nblimite_spinbutton");
-	gtk_spin_button_set_value(GTK_SPIN_BUTTON(membre_limit_input), c.membre_limit);
-
-	GtkWidget *type_community_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_community_radiobutton");
-	if(c.type == 1)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(type_community_input), TRUE);
+	GtkWidget *etat_disponible_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_disponible_radiobutton");
+	if(e.etat == 1)
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_disponible_input), TRUE);
 	else
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(type_community_input), FALSE);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_disponible_input), FALSE);
 
-	GtkWidget *type_training_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_training_radiobutton");
-	if(c.type == 2)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(type_training_input), TRUE);
+	GtkWidget *etat_enpanne_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_enpanne_radiobutton");
+	if(e.etat == 2)
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_enpanne_input), TRUE);
 	else
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(type_training_input), FALSE);
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_enpanne_input), FALSE);
 
-	GtkWidget *activites_entrainement_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_entrainement_checkbutton");
-	GtkWidget *activites_defoulement_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_defoulement_checkbutton");
-	
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(activites_entrainement_input), FALSE);
-	gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(activites_defoulement_input), FALSE);	
-	if(c.activites & 1)
-	{
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(activites_entrainement_input), TRUE);
-	}
-	c.activites = c.activites >> 1;
-		
-	if(c.activites & 1)
-		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(activites_defoulement_input), TRUE);
-
-	
-}
-
-
-void
-on_button144_clicked                   (GtkWidget       *objet_graphique,
-                                        gpointer         user_data)
-{
-	centre c;
-	c.id = id;
-
-	GtkWidget *nom_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_nomcentre_entry");
-	strcpy(c.nom,gtk_entry_get_text(GTK_ENTRY(nom_input)));
-
-        GtkWidget *ville_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_ville_comboboxentry");
-	strcpy(c.ville,gtk_combo_box_get_active_text(GTK_COMBO_BOX(ville_input)));
-
-	GtkWidget *horaire_ouverture_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_horaire_spinbutton");
-	c.horaire_ouverture = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(horaire_ouverture_input));
-
-	GtkWidget *horaire_fermeture_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_fermeture_spinbutton");
-	c.horaire_fermeture = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(horaire_fermeture_input));
-
-	GtkWidget *membre_limit_input = lookup_widget(objet_graphique, "nl_gestion_centre_modifier_nblimite_spinbutton");
-	c.membre_limit = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(membre_limit_input));
-
-	c.type = type;
-	c.activites = activites[0] + activites[1];
-	type = 1;
-	activites[0] = 0;
-	activites[1] = 0;
-
-	char *fichier = "centre.txt";
-	int result = modifier(fichier, c.id, c);
-}
-
-
-void
-on_nl_gestion_centre_modifier_community_radiobutton_toggled
-                                        (GtkToggleButton *togglebutton,
-                                        gpointer         user_data)
-{
-	if(gtk_toggle_button_get_active(togglebutton))
-		type = 1;
-}
-
-
-void
-on_nl_gestion_centre_modifier_training_radiobutton_toggled
-                                        (GtkToggleButton *togglebutton,
-                                        gpointer         user_data)
-{
-	if(gtk_toggle_button_get_active(togglebutton))
-		type = 2;
-}
-
-
-void
-on_nl_gestion_centre_modifier_entrainement_checkbutton_toggled
-                                        (GtkToggleButton *togglebutton,
-                                        gpointer         user_data)
-{
-	if(gtk_toggle_button_get_active(togglebutton))
-	{
-		activites[0] = 1;
-	}
+	GtkWidget *etat_enmaintenance_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_enmaintenance_radiobutton");
+	if(e.etat == 3)
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_enmaintenance_input), TRUE);
 	else
-		activites[0] = 0;
+		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_enmaintenance_input), FALSE);
+
 }
 
 
+//enregistrer modifier
 void
-on_nl_gestion_centre_modifier_defoulement_checkbutton_toggled
-                                        (GtkToggleButton *togglebutton,
-                                        gpointer         user_data)
-{
-	if(gtk_toggle_button_get_active(togglebutton))
-	{
-		activites[1] = 2;
-	}
-	else
-		activites[1] = 0;
-}
-
-
-void
-on_nl_gestion_centre_supprimer_rechercher_button_clicked
+on_in_gestion_equipement_modifier_enregistrer_button_clicked
                                         (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
-	
+	equipement e;
+	e.id = id;
+
+	GtkWidget *nom_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_nomequipement_entry");
+	strcpy(e.nom,gtk_entry_get_text(GTK_ENTRY(nom_input)));
+
+        GtkWidget *categorie_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_categorie_comboboxentry");
+	strcpy(e.categorie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(categorie_input)));
+
+	GtkWidget *quantite = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_qtdispo_spinbutton");
+	e.quantite = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(quantite));
+
+	e.etat = etat;
+	etat = 1;
+
+	char *fichier = "equipement.txt";
+	int result = modifier(fichier, e.id, e);
 }
 
 
 void
-on_nl_gestion_centre_supprimer_supprimer_button_clicked
+on_in_gestion_equipement_modifier_enpanne_radiobutton_toggled
+                                        (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+	if(gtk_toggle_button_get_active(togglebutton))
+		etat = 2;
+}
+
+
+void
+on_radiobutton84_toggled               (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+
+}
+
+
+void
+on_in_gestion_equipement_modifier_disponible_radiobutton_toggled
+                                        (GtkToggleButton *togglebutton,
+                                        gpointer         user_data)
+{
+	if(gtk_toggle_button_get_active(togglebutton))
+		etat = 1;
+}
+
+
+//supprimer
+void
+on_in_gestion_equipement_supprimer_supprimer_button_clicked
                                         (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
-	GtkWidget *id_input = lookup_widget(objet_graphique, "nl_gestion_centre_supprimer_rechercher_entry");
+	GtkWidget *id_input = lookup_widget(objet_graphique, "in_gestion_equipement_supprimer_id_entry");
 	int id_supp = atoi(gtk_entry_get_text(GTK_ENTRY(id_input)));
 	
-	char *fichier = "centre.txt";
+	char *fichier = "equipement.txt";
 	supprimer(fichier, id_supp);
 }
 
 
 void
-on_nl_gestion_centre_supprimer_annuler_button_clicked
-                                        (GtkWidget       *objet_graphique,
+on_in_gestion_equipement_modifier_enmaintenance_radiobutton_toggled
+                                        (GtkToggleButton *togglebutton,
                                         gpointer         user_data)
 {
-
+	if(gtk_toggle_button_get_active(togglebutton))
+		etat = 3;
 }
 
 
+//actualiser tree view
 void
-on_nl_gestion_centre_ajouter_actualiser_button_clicked
+on_in_gestion_equipement_ajouter_actualiser_button_clicked
                                         (GtkWidget       *objet_graphique,
                                         gpointer         user_data)
 {
-	GtkWidget *tree_input = lookup_widget(objet_graphique, "nl_gestion_centre_ajouter_liste_treeview");
+	GtkWidget *tree_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_liste_treeview");
 	afficher(tree_input);
 }
 
 
+//supprimer d'apres le tree view
 void
-on_nl_gestion_centre_ajouter_liste_treeview_row_activated
+on_in_gestion_equipement_ajouter_liste_treeview_row_activated
                                         (GtkTreeView     *treeview,
                                         GtkTreePath     *path,
                                         GtkTreeViewColumn *column,
                                         gpointer         user_data)
 {
 	GtkTreeIter iter;
-	centre c;
+	equipement e;
 
 	GtkTreeModel *model = gtk_tree_view_get_model(treeview);
 	if(gtk_tree_model_get_iter(model, &iter, path))
 	{
-		gtk_tree_model_get(model, &iter, ID, &c.id, NOM, c.nom, VILLE, c.ville, HORAIRE_OUVERTURE, &c.horaire_ouverture, HORAIRE_FERMETURE, &c.horaire_fermeture, MEMBRE_LIMIT, &c.membre_limit, TYPE, &c.type, ACTIVITES, &c.activites, -1);
-		char *fichier = "centre.txt";		
-		supprimer(fichier, c.id);
+		gtk_tree_model_get(model, &iter, ID, &e.id, NOM, e.nom, CATEGORIE, e.categorie, ANNEE_ACHAT, &e.annee_achat, MOIS_ACHAT, &e.mois_achat, JOUR_ACHAT, &e.jour_achat, ETAT, &e.etat, QUANTITE, &e.quantite, -1);
+		char *fichier = "equipement.txt";		
+		supprimer(fichier, e.id);
 		afficher(GTK_WIDGET(treeview));
 	}
 }

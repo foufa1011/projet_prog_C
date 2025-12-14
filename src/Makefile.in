@@ -100,7 +100,7 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_glade_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	interface.$(OBJEXT) callbacks.$(OBJEXT) centre.$(OBJEXT)
+	interface.$(OBJEXT) callbacks.$(OBJEXT) equipement.$(OBJEXT)
 glade_OBJECTS = $(am_glade_OBJECTS)
 am__DEPENDENCIES_1 =
 glade_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -282,7 +282,7 @@ glade_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	centre.c centre.h
+	equipement.c equipement.h
 
 glade_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 all: all-am
@@ -372,7 +372,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/callbacks.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/centre.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/equipement.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/interface.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/support.Po@am__quote@
