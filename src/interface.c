@@ -48,6 +48,8 @@ create_espace_administratif (void)
   GtkWidget *mbm_gestion_membre_Ajouter_taille_SpinButton;
   GtkWidget *mbm_gestion_membre_Ajouter_Telephone_entry;
   GtkWidget *mbm_gestion_membre_Ajouter_Taille_label;
+  GtkWidget *mbm_gestion_membre_Ajouter_liste_ScrolledWindow;
+  GtkWidget *mbm_gestion_membre_Ajouter_liste_TreeView;
   GtkWidget *mbm_gestion_membre_Ajouter_nom_label;
   GtkWidget *mbm_gestion_membre_Ajouter_Email_label;
   GtkWidget *mbm_gestion_membre_Ajouter_genre_label;
@@ -60,21 +62,19 @@ create_espace_administratif (void)
   GtkWidget *mbm_gestion_membre_Ajouter_poids_label;
   GtkWidget *mbm_gestion_membre_Ajouter_codepostal_label;
   GtkWidget *mbm_gestion_membre_Ajouter_formulaire_label;
-  GtkWidget *mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry;
-  GtkWidget *mbm_gestion_membre_Ajouter_Homme_radiobutton;
-  GSList *mbm_gestion_membre_Ajouter_Homme_radiobutton_group = NULL;
-  GtkWidget *mbm_gestion_membre_Ajouter_femme_radiobutton;
-  GtkWidget *mbm_gestion_membre_Ajouter_dnd_comboboxentry;
-  GtkWidget *mbm_gestion_membre_Ajouter_conditions_CheckButton;
-  GtkWidget *mbm_gestion_membre_Ajouter_newsletter_CheckButton;
-  GtkWidget *mbm_gestion_membre_Ajouter_liste_label;
-  GtkWidget *mbm_gestion_membre_Ajouter_liste_ScrolledWindow;
-  GtkWidget *mbm_gestion_membre_Ajouter_liste_TreeView;
   GtkWidget *mbm_gestion_membre_Ajouter_enregistrer_Button;
   GtkWidget *alignment45;
   GtkWidget *hbox90;
   GtkWidget *image69;
   GtkWidget *label537;
+  GtkWidget *mbm_gestion_membre_Ajouter_femme_radiobutton;
+  GSList *mbm_gestion_membre_Ajouter_femme_radiobutton_group = NULL;
+  GtkWidget *mbm_gestion_membre_Ajouter_dnd_comboboxentry;
+  GtkWidget *mbm_gestion_membre_Ajouter_Homme_radiobutton;
+  GtkWidget *mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry;
+  GtkWidget *mbm_gestion_membre_Ajouter_liste_label;
+  GtkWidget *mbm_gestion_membre_Ajouter_newsletter_CheckButton;
+  GtkWidget *mbm_gestion_membre_Ajouter_conditions_CheckButton;
   GtkWidget *mbm_gestion_membre_ajouter_label;
   GtkWidget *fixed3;
   GtkWidget *mbm_gestion_membre_modifier_nom_entry;
@@ -105,15 +105,15 @@ create_espace_administratif (void)
   GtkWidget *mbm_gestion_membre_modifier_codepostal_label;
   GtkWidget *mbm_gestion_membre_modifier_rechercher_label;
   GtkWidget *mbm_gestion_membre_modifier_formulaire_label;
-  GtkWidget *mbm_gestion_membre_modifier_rechercher_button;
-  GtkWidget *image1;
-  GtkWidget *mbm_gestion_membre_modifier_typeabonnement_comboboxentry;
-  GtkWidget *mbm_gestion_membre_modifier_dnd_comboboxentry;
   GtkWidget *mbm_gestion_membre_modifier_enregistrer_button;
   GtkWidget *alignment46;
   GtkWidget *hbox91;
   GtkWidget *image70;
   GtkWidget *label538;
+  GtkWidget *mbm_gestion_membre_modifier_typeabonnement_comboboxentry;
+  GtkWidget *mbm_gestion_membre_modifier_dnd_comboboxentry;
+  GtkWidget *mbm_gestion_membre_modifier_rechercher_button;
+  GtkWidget *image1;
   GtkWidget *mbm_gestion_membre_modifier_label;
   GtkWidget *fixed4;
   GtkWidget *mbm_gestion_membre_supprimer_id_entry;
@@ -138,8 +138,8 @@ create_espace_administratif (void)
   GtkWidget *label910;
   GtkWidget *scrolledwindow1;
   GtkWidget *ft_gestion_entraineur_dashboard_treeview;
-  GtkWidget *ft_gestion_entraineur_dashboard_title2_label;
   GtkWidget *ft_gestion_entraineur_dashboard_title1_label;
+  GtkWidget *ft_gestion_entraineur_dashboard_title2_label;
   GtkWidget *label874;
   GtkWidget *eventbox1;
   GtkWidget *fixed48;
@@ -180,17 +180,17 @@ create_espace_administratif (void)
   GtkWidget *ft_gestion_entraineur_ajouter_datedebut_jour_label;
   GtkWidget *ft_gestion_entraineur_ajouter_datedebut_mois_label;
   GtkWidget *ft_gestion_entraineur_ajouter_datedebut_annee_label;
-  GtkWidget *ft_gestion_entraineur_ajouter_femme_radiobutton;
-  GSList *ft_gestion_entraineur_ajouter_femme_radiobutton_group = NULL;
-  GtkWidget *ft_gestion_entraineur_ajouter_homme_radiobutton;
-  GtkWidget *ft_gestion_entraineur_ajouter_specialite_comboboxentry;
-  GtkWidget *ft_gestion_entraineur_ajouter_actif_checkbutton;
-  GtkWidget *ft_gestion_entraineur_ajouter_inactif_checkbutton;
   GtkWidget *ft_gestion_entraineur_ajouter_enregistrer_button;
   GtkWidget *alignment58;
   GtkWidget *hbox103;
   GtkWidget *ft_gestion_entraineur_ajouter_enregistrer_image;
   GtkWidget *ft_gestion_entraineur_ajouter_enregistrer_label;
+  GtkWidget *ft_gestion_entraineur_ajouter_femme_radiobutton;
+  GSList *ft_gestion_entraineur_ajouter_femme_radiobutton_group = NULL;
+  GtkWidget *ft_gestion_entraineur_ajouter_homme_radiobutton;
+  GtkWidget *ft_gestion_entraineur_ajouter_inactif_checkbutton;
+  GtkWidget *ft_gestion_entraineur_ajouter_specialite_comboboxentry;
+  GtkWidget *ft_gestion_entraineur_ajouter_actif_checkbutton;
   GtkWidget *ft_gestion_entraineur_ajouter_label;
   GtkWidget *fixed57;
   GtkWidget *ft_gestion_entraineur_modifier_nomcomplet_entry;
@@ -231,6 +231,11 @@ create_espace_administratif (void)
   GtkWidget *ft_gestion_entraineur_modifier_info_label;
   GtkWidget *ft_gestion_entraineur_modifier_id_display_label;
   GtkWidget *ft_gestion_entraineur_modifier_msg_label;
+  GtkWidget *ft_gestion_entraineur_modifier_enregistrer_button;
+  GtkWidget *ft_gestion_entraineur_modifier_datedebut_enregistrer_label;
+  GtkWidget *hbox116;
+  GtkWidget *ft_gestion_entraineur_modifier_enregistrer_image;
+  GtkWidget *ft_gestion_entraineur_modifier_enregistrer_label;
   GtkWidget *ft_gestion_entraineur_modifier_rechercher_button;
   GtkWidget *ft_gestion_entraineur_modifier_rechercher_image;
   GtkWidget *ft_gestion_entraineur_modifier_femme_radiobutton;
@@ -239,11 +244,6 @@ create_espace_administratif (void)
   GtkWidget *ft_gestion_entraineur_modifier_specialite_comboboxentry;
   GtkWidget *ft_gestion_entraineur_modifier_actif_checkbutton;
   GtkWidget *ft_gestion_entraineur_modifier_inactif_checkbutton;
-  GtkWidget *ft_gestion_entraineur_modifier_enregistrer_button;
-  GtkWidget *ft_gestion_entraineur_modifier_datedebut_enregistrer_label;
-  GtkWidget *hbox116;
-  GtkWidget *ft_gestion_entraineur_modifier_enregistrer_image;
-  GtkWidget *ft_gestion_entraineur_modifier_enregistrer_label;
   GtkWidget *ft_gestion_entraineur_modifier_label;
   GtkWidget *fixed43;
   GtkWidget *ft_gestion_entraineur_supprimer_id_entry;
@@ -251,18 +251,18 @@ create_espace_administratif (void)
   GtkWidget *ft_gestion_entraineur_supprimer_msg_label;
   GtkWidget *ft_gestion_entraineur_supprimer_coachinfo_label;
   GtkWidget *ft_gestion_entraineur_supprimer_rechercher_label;
-  GtkWidget *ft_gestion_entraineur_supprimer_annuler_button;
-  GtkWidget *alignment47;
-  GtkWidget *hbox92;
-  GtkWidget *ft_gestion_entraineur_supprimer_supprimer_annuler_image;
-  GtkWidget *ft_gestion_entraineur_supprimer_annuler_label;
+  GtkWidget *ft_gestion_entraineur_supprimer_rechercher_button;
+  GtkWidget *ft_gestion_entaineur_supprimer_rechercher_image;
   GtkWidget *ft_gestion_entraineur_supprimer_supprimer_button;
   GtkWidget *alignment48;
   GtkWidget *hbox93;
   GtkWidget *ft_gestion_entraineur_supprimer_supprimer_image;
   GtkWidget *ft_gestion_entraineur_supprimer_supprimer_label;
-  GtkWidget *ft_gestion_entraineur_supprimer_rechercher_button;
-  GtkWidget *ft_gestion_entaineur_supprimer_rechercher_image;
+  GtkWidget *ft_gestion_entraineur_supprimer_annuler_button;
+  GtkWidget *alignment47;
+  GtkWidget *hbox92;
+  GtkWidget *ft_gestion_entraineur_supprimer_supprimer_annuler_image;
+  GtkWidget *ft_gestion_entraineur_supprimer_annuler_label;
   GtkWidget *ft_gestion_entraineur_supprimer_label;
   GtkWidget *ft_gestion_entaineur_label;
   GtkWidget *em_gestion_cours_notebook;
@@ -301,9 +301,9 @@ create_espace_administratif (void)
   GtkWidget *em_gestion_cours_ajouter_centre_label;
   GtkWidget *em_gestion_cours_ajouter_liste_label;
   GtkWidget *em_gestion_cours_ajouter_duree_label;
+  GtkWidget *em_gestion_cours_ajouter_centre_comboboxentry;
   GtkWidget *em_gestion_cours_ajouter_typecours_comboboxentry;
   GtkWidget *em_gestion_cours_ajouter_nomentraineur_comboboxentry;
-  GtkWidget *em_gestion_cours_ajouter_centre_comboboxentry;
   GtkWidget *em_gestion_cours_ajouter_enregistrer_button;
   GtkWidget *alignment72;
   GtkWidget *hbox117;
@@ -329,6 +329,8 @@ create_espace_administratif (void)
   GtkWidget *em_gestion_cours_modifier_idcours_entry;
   GtkWidget *em_gestion_cours_modifier_rechercher_entry;
   GtkWidget *label710;
+  GtkWidget *em_gestion_cours_modifier_rechercher_button;
+  GtkWidget *em_gestion_cours_modifier_rechercher_image;
   GtkWidget *em_gestion_cours_modifier_datecours_mois_label;
   GtkWidget *em_gestion_cours_modifier_datecours_annee_label;
   GtkWidget *em_gestion_cours_modifier_rechercher_label;
@@ -342,8 +344,6 @@ create_espace_administratif (void)
   GtkWidget *em_gestion_cours_modifier_nbplaces_label;
   GtkWidget *em_gestion_cours_modifier_centre_label;
   GtkWidget *em_gestion_cours_modifier_datecours_jour_label;
-  GtkWidget *em_gestion_cours_modifier_rechercher_button;
-  GtkWidget *em_gestion_cours_modifier_rechercher_image;
   GtkWidget *em_gestion_cours_modifier_typecours_comboboxentry;
   GtkWidget *em_gestion_cours_modifier_nomentraineur_entry;
   GtkWidget *em_gestion_cours_modifier_centre_comboboxentry;
@@ -357,8 +357,8 @@ create_espace_administratif (void)
   GtkWidget *em_gestion_cours_supprimer_id_entry;
   GtkWidget *em_gestion_cours_supprimer_rechercher_button;
   GtkWidget *em_gestion_cours_supprimer_rechercher_image;
+  GtkWidget *em_gestion_cours_supprimer_rechercher_label;
   GtkWidget *em_gestion_cours_supprimer_id_label;
-  GtkWidget *em_gestion_cours_titre_supprimer_rechercher_label;
   GtkWidget *em_gestion_cours_supprimer_annuler_button;
   GtkWidget *alignment63;
   GtkWidget *hbox108;
@@ -380,9 +380,17 @@ create_espace_administratif (void)
   GtkWidget *in_gestion_equipement_ajouter_dateachat_calendar;
   GtkObject *in_gestion_equipement_ajouter_qtdispo_spinbutton_adj;
   GtkWidget *in_gestion_equipement_ajouter_qtdispo_spinbutton;
+  GtkWidget *in_gestion_equipement_ajouter_idequipement_entry;
+  GtkWidget *in_gestion_equipement_ajouter_enpanne_radiobutton;
+  GSList *in_gestion_equipement_ajouter_enpanne_radiobutton_group = NULL;
+  GtkWidget *in_gestion_equipement_ajouter_enmaintenance_radiobutton;
   GtkWidget *in_gestion_equipement_ajouter_liste_scrolledwindow;
   GtkWidget *in_gestion_equipement_ajouter_liste_treeview;
+  GtkWidget *in_gestion_equipement_ajouter_disponible_radiobutton;
+  GtkWidget *in_gestion_equipement_ajouter_categorie_comboboxentry;
+  GtkWidget *in_gestion_equipement_ajouter_centre_comboboxentry;
   GtkWidget *in_gestion_equipement_ajouter_intro_label;
+  GtkWidget *in_gestion_equipement_ajouter_idequipement_label;
   GtkWidget *in_gestion_equipement_ajouter_nomequipement_label;
   GtkWidget *in_gestion_equipement_ajouter_categorie_label;
   GtkWidget *in_gestion_equipement_ajouter_dateachat_label;
@@ -390,25 +398,26 @@ create_espace_administratif (void)
   GtkWidget *in_gestion_equipement_ajouter_qtdispo_label;
   GtkWidget *in_gestion_equipement_ajouter_centre_label;
   GtkWidget *in_gestion_equipement_ajouter_liste_label;
-  GtkWidget *in_gestion_equipement_ajouter_centre_comboboxentry;
-  GtkWidget *in_gestion_equipement_ajouter_enmaintenance_radiobutton;
-  GSList *in_gestion_equipement_ajouter_enmaintenance_radiobutton_group = NULL;
-  GtkWidget *in_gestion_equipement_ajouter_enpanne_radiobutton;
-  GtkWidget *in_gestion_equipement_ajouter_disponible_radiobutton;
-  GtkWidget *in_gestion_equipement_ajouter_categorie_comboboxentry;
   GtkWidget *in_gestion_equipement_ajouter_enregistrer_button;
   GtkWidget *alignment74;
   GtkWidget *hbox119;
   GtkWidget *in_gestion_equipement_ajouter_enregistrer_image;
   GtkWidget *in_gestion_equipement_ajouter_enregistrer_label;
-  GtkWidget *in_gestion_equipement_ajouter_actualiser_button;
   GtkWidget *in_gestion_equipement_ajouter_label;
   GtkWidget *fixed59;
   GtkWidget *in_gestion_equipement_modifier_nomequipement_entry;
   GtkWidget *in_gestion_equipement_modifier_dateachat_calendar;
   GtkObject *in_gestion_equipement_modifier_qtdispo_spinbutton_adj;
   GtkWidget *in_gestion_equipement_modifier_qtdispo_spinbutton;
+  GtkWidget *radiobutton84;
   GtkWidget *in_gestion_equipement_modifier_rechercher_entry;
+  GtkWidget *in_gestion_equipement_modifier_rechercher_button;
+  GtkWidget *in_gestion_equipement_modifier_rechercher_image;
+  GtkWidget *in_gestion_equipement_modifier_categorie_comboboxentry;
+  GtkWidget *in_gestion_equipement_modifier_disponible_radiobutton;
+  GSList *in_gestion_equipement_modifier_disponible_radiobutton_group = NULL;
+  GtkWidget *in_gestion_equipement_modifier_enpanne_radiobutton;
+  GtkWidget *in_gestion_equipement_modifier_centre_comboboxentry;
   GtkWidget *in_gestion_equipement_modifier_rechercher_label;
   GtkWidget *in_gestion_equipement_modifier_nomequipement_label;
   GtkWidget *in_gestion_equipement_modifier_categorie_label;
@@ -416,31 +425,23 @@ create_espace_administratif (void)
   GtkWidget *in_gestion_equipement_modifier_etat_label;
   GtkWidget *in_gestion_equipement_modifier_qtdispo_label;
   GtkWidget *in_gestion_equipement_modifier_centre_label;
-  GtkWidget *in_gestion_equipement_modifier_rechercher_button;
-  GtkWidget *in_gestion_equipement_modifier_rechercher_image;
   GtkWidget *in_gestion_equipement_modifier_enregistrer_button;
   GtkWidget *alignment78;
   GtkWidget *hbox123;
   GtkWidget *in_gestion_equipement_modifier_enregistrer_image;
   GtkWidget *in_gestion_equipement_modifier_enregistrer_label;
-  GtkWidget *in_gestion_equipement_modifier_centre_comboboxentry;
-  GtkWidget *in_gestion_equipement_modifier_disponible_radiobutton;
-  GSList *in_gestion_equipement_modifier_disponible_radiobutton_group = NULL;
-  GtkWidget *in_gestion_equipement_modifier_enpanne_radiobutton;
-  GtkWidget *in_gestion_equipement_modifier_categorie_comboboxentry;
-  GtkWidget *in_gestion_equipement_modifier_enmaintenance_radiobutton;
   GtkWidget *in_gestion_equipement_modifier_label;
   GtkWidget *fixed54;
   GtkWidget *in_gestion_equipement_supprimer_id_entry;
   GtkWidget *in_gestion_equipement_supprimer_id_label;
+  GtkWidget *in_gestion_equipement_supprimer_rechercher_button;
+  GtkWidget *in_gestion_equipement_supprimer_rechercher_image;
   GtkWidget *in_gestion_equipement_supprimer_rechercher_label;
   GtkWidget *in_gestion_equipement_supprimer_annuler_button;
   GtkWidget *alignment65;
   GtkWidget *hbox110;
   GtkWidget *in_gestion_equipement_supprimer_annuler_image;
   GtkWidget *in_gestion_equipement_supprimer_annuler_label;
-  GtkWidget *in_gestion_equipement_supprimer_rechercher_button;
-  GtkWidget *in_gestion_equipement_supprimer_rechercher_image;
   GtkWidget *in_gestion_equipement_supprimer_supprimer_button;
   GtkWidget *alignment66;
   GtkWidget *hbox111;
@@ -459,7 +460,6 @@ create_espace_administratif (void)
   GtkWidget *nl_gestion_centre_ajouter_ouverture_spinbutton;
   GtkObject *nl_gestion_centre_ajouter_fermeture_button_adj;
   GtkWidget *nl_gestion_centre_ajouter_fermeture_button;
-  GtkWidget *vseparator1;
   GtkWidget *nl_gestion_centre_ajouter_liste_label;
   GtkWidget *nl_gestion_centre_ajouter_liste_scrolledwindow;
   GtkWidget *nl_gestion_centre_ajouter_liste_treeview;
@@ -468,20 +468,22 @@ create_espace_administratif (void)
   GtkWidget *nl_gestion_centre_ajouter_ouverture_label;
   GtkWidget *nl_gestion_centre_ajouter_fermeture_label;
   GtkWidget *nl_gestion_centre_ajouter_horaire_label;
-  GtkWidget *nl_gestion_centre_ajouter_nblimite_label;
   GtkWidget *nl_gestion_centre_ajouter_type_label;
   GtkWidget *nl_gestion_centre_ajouter_activite_label;
-  GtkWidget *nl_gestion_centre_ajouter_localisation_comboboxentry;
+  GtkWidget *nl_gestion_centre_ajouter_nblimite_label;
+  GtkWidget *nl_gestion_centre_ajouter_entrainement_checkbutton;
+  GtkWidget *nl_gestion_centre_ajouter_defoulement_checkbutton;
+  GtkWidget *vseparator1;
   GtkWidget *nl_gestion_centre_ajouter_community_radiobutton;
   GSList *nl_gestion_centre_ajouter_community_radiobutton_group = NULL;
   GtkWidget *nl_gestion_centre_ajouter_training_radiobutton;
-  GtkWidget *nl_gestion_centre_ajouter_entrainement_checkbutton;
-  GtkWidget *nl_gestion_centre_ajouter_defoulement_checkbutton;
+  GtkWidget *nl_gestion_centre_ajouter_localisation_comboboxentry;
   GtkWidget *nl_gestion_centre_ajouter_enregistrer_button;
   GtkWidget *alignment76;
   GtkWidget *hbox121;
   GtkWidget *nl_gestion_centre_ajouter_enregistrer_image;
   GtkWidget *nl_gestion_centre_ajouter_enregistrer_label;
+  GtkWidget *nl_gestion_centre_ajouter_actualiser_button;
   GtkWidget *nl_gestion_centre_ajouter_label;
   GtkWidget *fixed60;
   GtkWidget *nl_gestion_centre_modifier_nomcentre_entry;
@@ -503,21 +505,21 @@ create_espace_administratif (void)
   GtkWidget *nl_gestion_centre_modifier_activite_label;
   GtkWidget *nl_gestion_centre_modifier_rechercher_button;
   GtkWidget *nl_gestion_centre_modifier_rechercher_image;
-  GtkWidget *nl_gestion_centre_modifier_ville_comboboxentry;
-  GtkWidget *nl_gestion_centre_modifier_community_radiobutton;
-  GtkWidget *nl_gestion_centre_modifier_training_radiobutton;
-  GSList *nl_gestion_centre_modifier_training_radiobutton_group = NULL;
-  GtkWidget *nl_gestion_centre_modifier_entrainement_checkbutton;
-  GtkWidget *nl_gestion_centre_modifier_defoulement_checkbutton;
   GtkWidget *button144;
   GtkWidget *alignment79;
   GtkWidget *hbox124;
   GtkWidget *image116;
   GtkWidget *label736;
+  GtkWidget *nl_gestion_centre_modifier_entrainement_checkbutton;
+  GtkWidget *nl_gestion_centre_modifier_defoulement_checkbutton;
+  GtkWidget *nl_gestion_centre_modifier_community_radiobutton;
+  GSList *nl_gestion_centre_modifier_community_radiobutton_group = NULL;
+  GtkWidget *nl_gestion_centre_modifier_training_radiobutton;
+  GtkWidget *nl_gestion_centre_modifier_ville_comboboxentry;
   GtkWidget *nl_gestion_centre_modifier_label;
   GtkWidget *fixed55;
   GtkWidget *nl_gestion_centre_supprimer_rechercher_entry;
-  GtkWidget *nl_gestion_centre_titre_supprimer_label;
+  GtkWidget *nl_gestion_centre_supprimer_titre_label;
   GtkWidget *nl_gestion_centre_supprimer_rechercher_button;
   GtkWidget *nl_gestion_centre_supprimer_rechercher_image;
   GtkWidget *nl_gestion_centre_supprimer_supprimer_button;
@@ -548,21 +550,21 @@ create_espace_administratif (void)
   GtkWidget *am_gestion_evenement_ajouter_nomevenement_entry;
   GtkObject *am_gestion_evenement_ajouter_minute_spinbutton_adj;
   GtkWidget *am_gestion_evenement_ajouter_minute_spinbutton;
+  GtkWidget *am_gestion_evenement_ajouter_sport_radiobutton;
+  GtkWidget *am_gestion_evenement_ajouter_bienetre_radiobutton;
+  GSList *am_gestion_evenement_ajouter_bienetre_radiobutton_group = NULL;
   GtkWidget *am_gestion_evenement_ajouter_dateheure_label;
+  GtkWidget *am_gestion_evenement_ajouter_nutrition_radiobutton;
   GtkWidget *am_gestion_evenement_ajouter_annee_label;
   GtkWidget *am_gestion_evenement_ajouter_mois_label;
   GtkWidget *label870;
   GtkWidget *am_gestion_evenement_ajouter_heure_label;
+  GtkWidget *am_gestion_evenement_ajouter_centre_comboboxentry;
   GtkWidget *am_gestion_evenement_ajouter_id_label;
   GtkWidget *am_gestion_evenement_ajouter_nomevenement_label;
   GtkWidget *am_gestion_evenement_ajouter_typeevenement_label;
   GtkWidget *am_gestion_evenement_ajouter_jour_label;
   GtkWidget *am_gestion_evenement_ajouter_centre_label;
-  GtkWidget *am_gestion_evenement_ajouter_sport_radiobutton;
-  GtkWidget *am_gestion_evenement_ajouter_nutrition_radiobutton;
-  GtkWidget *am_gestion_evenement_ajouter_bienetre_radiobutton;
-  GSList *am_gestion_evenement_ajouter_bienetre_radiobutton_group = NULL;
-  GtkWidget *am_gestion_evenement_ajouter_centre_comboboxentry;
   GtkWidget *am_gestion_evenement_ajouter_enregistrer_button;
   GtkWidget *alignment84;
   GtkWidget *hbox129;
@@ -584,24 +586,24 @@ create_espace_administratif (void)
   GtkWidget *label871;
   GtkObject *am_gestion_evenement_modifier_minute_spinbutton_adj;
   GtkWidget *am_gestion_evenement_modifier_minute_spinbutton;
+  GtkWidget *am_gestion_evenement_modifier_rechercher_button;
+  GtkWidget *am_gestion_evenement_modifier_rechercher_image;
   GtkWidget *am_gestion_evenement_modifier_nutrition_radiobutton;
+  GtkWidget *am_gestion_evenement_modifier_sport_radiobutton;
   GtkWidget *am_gestion_evenement_modifier_heuredate_label;
   GtkWidget *am_gestion_evenement_modifier_mois_label;
   GtkWidget *am_gestion_evenement_modifier_annee_label;
   GtkWidget *label872;
   GtkWidget *am_gestion_evenement_modifier_heure_label;
+  GtkWidget *am_gestion_evenement_modifier_centre_comboboxentry;
   GtkWidget *am_gestion_evenement_modifier_rechercher_label;
   GtkWidget *am_gestion_evenement_modifier_id_label;
   GtkWidget *am_gestion_evenement_modifier_nomevenement_label;
   GtkWidget *am_gestion_evenement_modifier_typeevenement_label;
   GtkWidget *am_gestion_evenement_modifier_jour_label;
   GtkWidget *label801;
-  GtkWidget *am_gestion_evenement_modifier_rechercher_button;
-  GtkWidget *am_gestion_evenement_modifier_rechercher_image;
   GtkWidget *am_gestion_evenement_modifier_bienetre_radiobutton;
   GSList *am_gestion_evenement_modifier_bienetre_radiobutton_group = NULL;
-  GtkWidget *am_gestion_evenement_modifier_sport_radiobutton;
-  GtkWidget *am_gestion_evenement_modifier_centre_comboboxentry;
   GtkWidget *am_gestion_evenement_modifier_enregistrer_button;
   GtkWidget *alignment85;
   GtkWidget *hbox130;
@@ -610,20 +612,20 @@ create_espace_administratif (void)
   GtkWidget *am_gestion_evenement_modifier_labe;
   GtkWidget *fixed63;
   GtkWidget *am_gestion_evenement_supprimer_id_entry;
-  GtkWidget *am_gestion_evenement_supprimer_rechercher_label;
-  GtkWidget *am_gestion_evenement_supprimer_id_label;
   GtkWidget *am_gestion_evenement_supprimer_rechercher_button;
   GtkWidget *am_gestion_evenement_supprimer_rechercher_image;
-  GtkWidget *am_gestion_evenement_supprimer_supprimer_button;
-  GtkWidget *alignment83;
-  GtkWidget *hbox128;
-  GtkWidget *am_gestion_evenement_supprimer_supprimer_image;
-  GtkWidget *am_gestion_evenement_supprimer_supprimer_label;
+  GtkWidget *am_gestion_evenement_supprimer_rechercher_label;
+  GtkWidget *am_gestion_evenement_supprimer_id_label;
   GtkWidget *am_gestion_evenement_supprimer_annuler_button;
   GtkWidget *alignment82;
   GtkWidget *hbox127;
   GtkWidget *am_gestion_evenement_supprimer_annuler_image;
   GtkWidget *am_gestion_evenement_supprimer_annuler_label;
+  GtkWidget *am_gestion_evenement_supprimer_supprimer_button;
+  GtkWidget *alignment83;
+  GtkWidget *hbox128;
+  GtkWidget *am_gestion_evenement_supprimer_supprimer_image;
+  GtkWidget *am_gestion_evenement_supprimer_supprimer_label;
   GtkWidget *am_gestion_evenement_supprimer_label;
   GtkWidget *am_gestion_evenement_label;
 
@@ -714,6 +716,15 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_Taille_label, 152, 240);
   gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_Taille_label, 88, 24);
 
+  mbm_gestion_membre_Ajouter_liste_ScrolledWindow = gtk_scrolled_window_new (NULL, NULL);
+  gtk_widget_show (mbm_gestion_membre_Ajouter_liste_ScrolledWindow);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_liste_ScrolledWindow, 0, 336);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_liste_ScrolledWindow, 648, 72);
+
+  mbm_gestion_membre_Ajouter_liste_TreeView = gtk_tree_view_new ();
+  gtk_widget_show (mbm_gestion_membre_Ajouter_liste_TreeView);
+  gtk_container_add (GTK_CONTAINER (mbm_gestion_membre_Ajouter_liste_ScrolledWindow), mbm_gestion_membre_Ajouter_liste_TreeView);
+
   mbm_gestion_membre_Ajouter_nom_label = gtk_label_new (_("Nom :"));
   gtk_widget_show (mbm_gestion_membre_Ajouter_nom_label);
   gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_nom_label, 8, 40);
@@ -775,55 +786,6 @@ create_espace_administratif (void)
   gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_formulaire_label, 216, 16);
   gtk_label_set_use_markup (GTK_LABEL (mbm_gestion_membre_Ajouter_formulaire_label), TRUE);
 
-  mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry, 376, 96);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry, 189, 29);
-
-  mbm_gestion_membre_Ajouter_Homme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Homme"));
-  gtk_widget_show (mbm_gestion_membre_Ajouter_Homme_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_Homme_radiobutton, 136, 112);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_Homme_radiobutton, 116, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_Homme_radiobutton), mbm_gestion_membre_Ajouter_Homme_radiobutton_group);
-  mbm_gestion_membre_Ajouter_Homme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_Homme_radiobutton));
-
-  mbm_gestion_membre_Ajouter_femme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Femme "));
-  gtk_widget_show (mbm_gestion_membre_Ajouter_femme_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_femme_radiobutton, 56, 112);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_femme_radiobutton, 116, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_femme_radiobutton), mbm_gestion_membre_Ajouter_Homme_radiobutton_group);
-  mbm_gestion_membre_Ajouter_Homme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_femme_radiobutton));
-
-  mbm_gestion_membre_Ajouter_dnd_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (mbm_gestion_membre_Ajouter_dnd_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_dnd_comboboxentry, 136, 144);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_dnd_comboboxentry, 149, 24);
-
-  mbm_gestion_membre_Ajouter_conditions_CheckButton = gtk_check_button_new_with_mnemonic (_("j'accepte les conditions Generales "));
-  gtk_widget_show (mbm_gestion_membre_Ajouter_conditions_CheckButton);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_conditions_CheckButton, 256, 272);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_conditions_CheckButton, 300, 24);
-
-  mbm_gestion_membre_Ajouter_newsletter_CheckButton = gtk_check_button_new_with_mnemonic (_("s'abonner a la newsletter "));
-  gtk_widget_show (mbm_gestion_membre_Ajouter_newsletter_CheckButton);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_newsletter_CheckButton, 56, 272);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_newsletter_CheckButton, 200, 24);
-
-  mbm_gestion_membre_Ajouter_liste_label = gtk_label_new (_("<b> \360\237\223\213 Liste des membres : </b>"));
-  gtk_widget_show (mbm_gestion_membre_Ajouter_liste_label);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_liste_label, 0, 304);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_liste_label, 169, 25);
-  gtk_label_set_use_markup (GTK_LABEL (mbm_gestion_membre_Ajouter_liste_label), TRUE);
-
-  mbm_gestion_membre_Ajouter_liste_ScrolledWindow = gtk_scrolled_window_new (NULL, NULL);
-  gtk_widget_show (mbm_gestion_membre_Ajouter_liste_ScrolledWindow);
-  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_liste_ScrolledWindow, 0, 336);
-  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_liste_ScrolledWindow, 648, 72);
-
-  mbm_gestion_membre_Ajouter_liste_TreeView = gtk_tree_view_new ();
-  gtk_widget_show (mbm_gestion_membre_Ajouter_liste_TreeView);
-  gtk_container_add (GTK_CONTAINER (mbm_gestion_membre_Ajouter_liste_ScrolledWindow), mbm_gestion_membre_Ajouter_liste_TreeView);
-
   mbm_gestion_membre_Ajouter_enregistrer_Button = gtk_button_new ();
   gtk_widget_show (mbm_gestion_membre_Ajouter_enregistrer_Button);
   gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_enregistrer_Button, 8, 424);
@@ -845,6 +807,46 @@ create_espace_administratif (void)
   gtk_widget_show (label537);
   gtk_box_pack_start (GTK_BOX (hbox90), label537, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label537), TRUE);
+
+  mbm_gestion_membre_Ajouter_femme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Femme "));
+  gtk_widget_show (mbm_gestion_membre_Ajouter_femme_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_femme_radiobutton, 56, 112);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_femme_radiobutton, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_femme_radiobutton), mbm_gestion_membre_Ajouter_femme_radiobutton_group);
+  mbm_gestion_membre_Ajouter_femme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_femme_radiobutton));
+
+  mbm_gestion_membre_Ajouter_dnd_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (mbm_gestion_membre_Ajouter_dnd_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_dnd_comboboxentry, 136, 144);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_dnd_comboboxentry, 149, 24);
+
+  mbm_gestion_membre_Ajouter_Homme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Homme"));
+  gtk_widget_show (mbm_gestion_membre_Ajouter_Homme_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_Homme_radiobutton, 136, 112);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_Homme_radiobutton, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_Homme_radiobutton), mbm_gestion_membre_Ajouter_femme_radiobutton_group);
+  mbm_gestion_membre_Ajouter_femme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (mbm_gestion_membre_Ajouter_Homme_radiobutton));
+
+  mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry, 376, 96);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry, 189, 29);
+
+  mbm_gestion_membre_Ajouter_liste_label = gtk_label_new (_("<b> \360\237\223\213 Liste des membres : </b>"));
+  gtk_widget_show (mbm_gestion_membre_Ajouter_liste_label);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_liste_label, 0, 304);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_liste_label, 169, 25);
+  gtk_label_set_use_markup (GTK_LABEL (mbm_gestion_membre_Ajouter_liste_label), TRUE);
+
+  mbm_gestion_membre_Ajouter_newsletter_CheckButton = gtk_check_button_new_with_mnemonic (_("s'abonner a la newsletter "));
+  gtk_widget_show (mbm_gestion_membre_Ajouter_newsletter_CheckButton);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_newsletter_CheckButton, 56, 272);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_newsletter_CheckButton, 200, 24);
+
+  mbm_gestion_membre_Ajouter_conditions_CheckButton = gtk_check_button_new_with_mnemonic (_("j'accepte les conditions Generales "));
+  gtk_widget_show (mbm_gestion_membre_Ajouter_conditions_CheckButton);
+  gtk_fixed_put (GTK_FIXED (fixed2), mbm_gestion_membre_Ajouter_conditions_CheckButton, 256, 272);
+  gtk_widget_set_size_request (mbm_gestion_membre_Ajouter_conditions_CheckButton, 300, 24);
 
   mbm_gestion_membre_ajouter_label = gtk_label_new (_("\342\234\232 Ajouter "));
   gtk_widget_show (mbm_gestion_membre_ajouter_label);
@@ -995,25 +997,6 @@ create_espace_administratif (void)
   gtk_widget_set_size_request (mbm_gestion_membre_modifier_formulaire_label, 208, 24);
   gtk_label_set_use_markup (GTK_LABEL (mbm_gestion_membre_modifier_formulaire_label), TRUE);
 
-  mbm_gestion_membre_modifier_rechercher_button = gtk_button_new ();
-  gtk_widget_show (mbm_gestion_membre_modifier_rechercher_button);
-  gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_rechercher_button, 464, 8);
-  gtk_widget_set_size_request (mbm_gestion_membre_modifier_rechercher_button, 32, 32);
-
-  image1 = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (image1);
-  gtk_container_add (GTK_CONTAINER (mbm_gestion_membre_modifier_rechercher_button), image1);
-
-  mbm_gestion_membre_modifier_typeabonnement_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (mbm_gestion_membre_modifier_typeabonnement_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_typeabonnement_comboboxentry, 392, 144);
-  gtk_widget_set_size_request (mbm_gestion_membre_modifier_typeabonnement_comboboxentry, 189, 29);
-
-  mbm_gestion_membre_modifier_dnd_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (mbm_gestion_membre_modifier_dnd_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_dnd_comboboxentry, 136, 176);
-  gtk_widget_set_size_request (mbm_gestion_membre_modifier_dnd_comboboxentry, 189, 29);
-
   mbm_gestion_membre_modifier_enregistrer_button = gtk_button_new ();
   gtk_widget_show (mbm_gestion_membre_modifier_enregistrer_button);
   gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_enregistrer_button, 0, 424);
@@ -1035,6 +1018,25 @@ create_espace_administratif (void)
   gtk_widget_show (label538);
   gtk_box_pack_start (GTK_BOX (hbox91), label538, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (label538), TRUE);
+
+  mbm_gestion_membre_modifier_typeabonnement_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (mbm_gestion_membre_modifier_typeabonnement_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_typeabonnement_comboboxentry, 392, 144);
+  gtk_widget_set_size_request (mbm_gestion_membre_modifier_typeabonnement_comboboxentry, 189, 29);
+
+  mbm_gestion_membre_modifier_dnd_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (mbm_gestion_membre_modifier_dnd_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_dnd_comboboxentry, 136, 176);
+  gtk_widget_set_size_request (mbm_gestion_membre_modifier_dnd_comboboxentry, 189, 29);
+
+  mbm_gestion_membre_modifier_rechercher_button = gtk_button_new ();
+  gtk_widget_show (mbm_gestion_membre_modifier_rechercher_button);
+  gtk_fixed_put (GTK_FIXED (fixed3), mbm_gestion_membre_modifier_rechercher_button, 464, 8);
+  gtk_widget_set_size_request (mbm_gestion_membre_modifier_rechercher_button, 32, 32);
+
+  image1 = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (image1);
+  gtk_container_add (GTK_CONTAINER (mbm_gestion_membre_modifier_rechercher_button), image1);
 
   mbm_gestion_membre_modifier_label = gtk_label_new (_("\342\234\217\357\270\217 Modifier "));
   gtk_widget_show (mbm_gestion_membre_modifier_label);
@@ -1142,17 +1144,17 @@ create_espace_administratif (void)
   gtk_widget_show (ft_gestion_entraineur_dashboard_treeview);
   gtk_container_add (GTK_CONTAINER (scrolledwindow1), ft_gestion_entraineur_dashboard_treeview);
 
-  ft_gestion_entraineur_dashboard_title2_label = gtk_label_new (_("<b>\360\237\223\214 Liste compl\303\250te du personnel (Roster)</b>"));
-  gtk_widget_show (ft_gestion_entraineur_dashboard_title2_label);
-  gtk_fixed_put (GTK_FIXED (fixed74), ft_gestion_entraineur_dashboard_title2_label, 0, 72);
-  gtk_widget_set_size_request (ft_gestion_entraineur_dashboard_title2_label, 312, 16);
-  gtk_label_set_use_markup (GTK_LABEL (ft_gestion_entraineur_dashboard_title2_label), TRUE);
-
   ft_gestion_entraineur_dashboard_title1_label = gtk_label_new (_("<b> \360\237\223\212 TABLEAU DE BORD DE LA GESTION DES ENTRA\303\216NEURS</b>"));
   gtk_widget_show (ft_gestion_entraineur_dashboard_title1_label);
   gtk_fixed_put (GTK_FIXED (fixed74), ft_gestion_entraineur_dashboard_title1_label, 112, 16);
   gtk_widget_set_size_request (ft_gestion_entraineur_dashboard_title1_label, 448, 32);
   gtk_label_set_use_markup (GTK_LABEL (ft_gestion_entraineur_dashboard_title1_label), TRUE);
+
+  ft_gestion_entraineur_dashboard_title2_label = gtk_label_new (_("<b>\360\237\223\214 Liste compl\303\250te du personnel (Roster)</b>"));
+  gtk_widget_show (ft_gestion_entraineur_dashboard_title2_label);
+  gtk_fixed_put (GTK_FIXED (fixed74), ft_gestion_entraineur_dashboard_title2_label, 0, 72);
+  gtk_widget_set_size_request (ft_gestion_entraineur_dashboard_title2_label, 312, 16);
+  gtk_label_set_use_markup (GTK_LABEL (ft_gestion_entraineur_dashboard_title2_label), TRUE);
 
   label874 = gtk_label_new (_(" \342\232\231\357\270\217 tableau de bord "));
   gtk_widget_show (label874);
@@ -1334,35 +1336,6 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_datedebut_annee_label, 272, 328);
   gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_datedebut_annee_label, 88, 24);
 
-  ft_gestion_entraineur_ajouter_femme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Femme "));
-  gtk_widget_show (ft_gestion_entraineur_ajouter_femme_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_femme_radiobutton, 72, 200);
-  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_femme_radiobutton, 116, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_femme_radiobutton), ft_gestion_entraineur_ajouter_femme_radiobutton_group);
-  ft_gestion_entraineur_ajouter_femme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_femme_radiobutton));
-
-  ft_gestion_entraineur_ajouter_homme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Homme"));
-  gtk_widget_show (ft_gestion_entraineur_ajouter_homme_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_homme_radiobutton, 152, 200);
-  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_homme_radiobutton, 124, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_homme_radiobutton), ft_gestion_entraineur_ajouter_femme_radiobutton_group);
-  ft_gestion_entraineur_ajouter_femme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_homme_radiobutton));
-
-  ft_gestion_entraineur_ajouter_specialite_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (ft_gestion_entraineur_ajouter_specialite_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_specialite_comboboxentry, 96, 288);
-  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_specialite_comboboxentry, 205, 32);
-
-  ft_gestion_entraineur_ajouter_actif_checkbutton = gtk_check_button_new_with_mnemonic (_("Actif "));
-  gtk_widget_show (ft_gestion_entraineur_ajouter_actif_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_actif_checkbutton, 64, 360);
-  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_actif_checkbutton, 126, 24);
-
-  ft_gestion_entraineur_ajouter_inactif_checkbutton = gtk_check_button_new_with_mnemonic (_("Inactif "));
-  gtk_widget_show (ft_gestion_entraineur_ajouter_inactif_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_inactif_checkbutton, 128, 360);
-  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_inactif_checkbutton, 126, 24);
-
   ft_gestion_entraineur_ajouter_enregistrer_button = gtk_button_new ();
   gtk_widget_show (ft_gestion_entraineur_ajouter_enregistrer_button);
   gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_enregistrer_button, 8, 400);
@@ -1384,6 +1357,35 @@ create_espace_administratif (void)
   gtk_widget_show (ft_gestion_entraineur_ajouter_enregistrer_label);
   gtk_box_pack_start (GTK_BOX (hbox103), ft_gestion_entraineur_ajouter_enregistrer_label, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (ft_gestion_entraineur_ajouter_enregistrer_label), TRUE);
+
+  ft_gestion_entraineur_ajouter_femme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Femme "));
+  gtk_widget_show (ft_gestion_entraineur_ajouter_femme_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_femme_radiobutton, 72, 200);
+  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_femme_radiobutton, 116, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_femme_radiobutton), ft_gestion_entraineur_ajouter_femme_radiobutton_group);
+  ft_gestion_entraineur_ajouter_femme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_femme_radiobutton));
+
+  ft_gestion_entraineur_ajouter_homme_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Homme"));
+  gtk_widget_show (ft_gestion_entraineur_ajouter_homme_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_homme_radiobutton, 152, 200);
+  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_homme_radiobutton, 124, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_homme_radiobutton), ft_gestion_entraineur_ajouter_femme_radiobutton_group);
+  ft_gestion_entraineur_ajouter_femme_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (ft_gestion_entraineur_ajouter_homme_radiobutton));
+
+  ft_gestion_entraineur_ajouter_inactif_checkbutton = gtk_check_button_new_with_mnemonic (_("Inactif "));
+  gtk_widget_show (ft_gestion_entraineur_ajouter_inactif_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_inactif_checkbutton, 128, 360);
+  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_inactif_checkbutton, 126, 24);
+
+  ft_gestion_entraineur_ajouter_specialite_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (ft_gestion_entraineur_ajouter_specialite_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_specialite_comboboxentry, 96, 288);
+  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_specialite_comboboxentry, 205, 32);
+
+  ft_gestion_entraineur_ajouter_actif_checkbutton = gtk_check_button_new_with_mnemonic (_("Actif "));
+  gtk_widget_show (ft_gestion_entraineur_ajouter_actif_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed48), ft_gestion_entraineur_ajouter_actif_checkbutton, 64, 360);
+  gtk_widget_set_size_request (ft_gestion_entraineur_ajouter_actif_checkbutton, 126, 24);
 
   ft_gestion_entraineur_ajouter_label = gtk_label_new (_("\342\234\232 Ajouter "));
   gtk_widget_show (ft_gestion_entraineur_ajouter_label);
@@ -1567,6 +1569,27 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed57), ft_gestion_entraineur_modifier_msg_label, 152, 416);
   gtk_widget_set_size_request (ft_gestion_entraineur_modifier_msg_label, 480, 32);
 
+  ft_gestion_entraineur_modifier_enregistrer_button = gtk_button_new ();
+  gtk_widget_show (ft_gestion_entraineur_modifier_enregistrer_button);
+  gtk_fixed_put (GTK_FIXED (fixed57), ft_gestion_entraineur_modifier_enregistrer_button, 8, 408);
+  gtk_widget_set_size_request (ft_gestion_entraineur_modifier_enregistrer_button, 128, 40);
+
+  ft_gestion_entraineur_modifier_datedebut_enregistrer_label = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (ft_gestion_entraineur_modifier_datedebut_enregistrer_label);
+  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_modifier_enregistrer_button), ft_gestion_entraineur_modifier_datedebut_enregistrer_label);
+
+  hbox116 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox116);
+  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_modifier_datedebut_enregistrer_label), hbox116);
+
+  ft_gestion_entraineur_modifier_enregistrer_image = gtk_image_new_from_stock ("gtk-floppy", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (ft_gestion_entraineur_modifier_enregistrer_image);
+  gtk_box_pack_start (GTK_BOX (hbox116), ft_gestion_entraineur_modifier_enregistrer_image, FALSE, FALSE, 0);
+
+  ft_gestion_entraineur_modifier_enregistrer_label = gtk_label_new_with_mnemonic (_("Enregistrer"));
+  gtk_widget_show (ft_gestion_entraineur_modifier_enregistrer_label);
+  gtk_box_pack_start (GTK_BOX (hbox116), ft_gestion_entraineur_modifier_enregistrer_label, FALSE, FALSE, 0);
+
   ft_gestion_entraineur_modifier_rechercher_button = gtk_button_new ();
   gtk_widget_show (ft_gestion_entraineur_modifier_rechercher_button);
   gtk_fixed_put (GTK_FIXED (fixed57), ft_gestion_entraineur_modifier_rechercher_button, 592, 8);
@@ -1605,27 +1628,6 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed57), ft_gestion_entraineur_modifier_inactif_checkbutton, 136, 384);
   gtk_widget_set_size_request (ft_gestion_entraineur_modifier_inactif_checkbutton, 118, 16);
 
-  ft_gestion_entraineur_modifier_enregistrer_button = gtk_button_new ();
-  gtk_widget_show (ft_gestion_entraineur_modifier_enregistrer_button);
-  gtk_fixed_put (GTK_FIXED (fixed57), ft_gestion_entraineur_modifier_enregistrer_button, 8, 408);
-  gtk_widget_set_size_request (ft_gestion_entraineur_modifier_enregistrer_button, 128, 40);
-
-  ft_gestion_entraineur_modifier_datedebut_enregistrer_label = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (ft_gestion_entraineur_modifier_datedebut_enregistrer_label);
-  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_modifier_enregistrer_button), ft_gestion_entraineur_modifier_datedebut_enregistrer_label);
-
-  hbox116 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox116);
-  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_modifier_datedebut_enregistrer_label), hbox116);
-
-  ft_gestion_entraineur_modifier_enregistrer_image = gtk_image_new_from_stock ("gtk-floppy", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (ft_gestion_entraineur_modifier_enregistrer_image);
-  gtk_box_pack_start (GTK_BOX (hbox116), ft_gestion_entraineur_modifier_enregistrer_image, FALSE, FALSE, 0);
-
-  ft_gestion_entraineur_modifier_enregistrer_label = gtk_label_new_with_mnemonic (_("Enregistrer"));
-  gtk_widget_show (ft_gestion_entraineur_modifier_enregistrer_label);
-  gtk_box_pack_start (GTK_BOX (hbox116), ft_gestion_entraineur_modifier_enregistrer_label, FALSE, FALSE, 0);
-
   ft_gestion_entraineur_modifier_label = gtk_label_new (_("\342\234\217\357\270\217 Modifier "));
   gtk_widget_show (ft_gestion_entraineur_modifier_label);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (ft_gestion_entraineur_notebook), gtk_notebook_get_nth_page (GTK_NOTEBOOK (ft_gestion_entraineur_notebook), 2), ft_gestion_entraineur_modifier_label);
@@ -1660,26 +1662,14 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed43), ft_gestion_entraineur_supprimer_rechercher_label, 104, 24);
   gtk_widget_set_size_request (ft_gestion_entraineur_supprimer_rechercher_label, 448, 32);
 
-  ft_gestion_entraineur_supprimer_annuler_button = gtk_button_new ();
-  gtk_widget_show (ft_gestion_entraineur_supprimer_annuler_button);
-  gtk_fixed_put (GTK_FIXED (fixed43), ft_gestion_entraineur_supprimer_annuler_button, 136, 104);
-  gtk_widget_set_size_request (ft_gestion_entraineur_supprimer_annuler_button, 192, 32);
+  ft_gestion_entraineur_supprimer_rechercher_button = gtk_button_new ();
+  gtk_widget_show (ft_gestion_entraineur_supprimer_rechercher_button);
+  gtk_fixed_put (GTK_FIXED (fixed43), ft_gestion_entraineur_supprimer_rechercher_button, 536, 64);
+  gtk_widget_set_size_request (ft_gestion_entraineur_supprimer_rechercher_button, 48, 32);
 
-  alignment47 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment47);
-  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_supprimer_annuler_button), alignment47);
-
-  hbox92 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox92);
-  gtk_container_add (GTK_CONTAINER (alignment47), hbox92);
-
-  ft_gestion_entraineur_supprimer_supprimer_annuler_image = gtk_image_new_from_stock ("gtk-stop", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (ft_gestion_entraineur_supprimer_supprimer_annuler_image);
-  gtk_box_pack_start (GTK_BOX (hbox92), ft_gestion_entraineur_supprimer_supprimer_annuler_image, FALSE, FALSE, 0);
-
-  ft_gestion_entraineur_supprimer_annuler_label = gtk_label_new_with_mnemonic (_("Annuler "));
-  gtk_widget_show (ft_gestion_entraineur_supprimer_annuler_label);
-  gtk_box_pack_start (GTK_BOX (hbox92), ft_gestion_entraineur_supprimer_annuler_label, FALSE, FALSE, 0);
+  ft_gestion_entaineur_supprimer_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (ft_gestion_entaineur_supprimer_rechercher_image);
+  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_supprimer_rechercher_button), ft_gestion_entaineur_supprimer_rechercher_image);
 
   ft_gestion_entraineur_supprimer_supprimer_button = gtk_button_new ();
   gtk_widget_show (ft_gestion_entraineur_supprimer_supprimer_button);
@@ -1702,14 +1692,26 @@ create_espace_administratif (void)
   gtk_widget_show (ft_gestion_entraineur_supprimer_supprimer_label);
   gtk_box_pack_start (GTK_BOX (hbox93), ft_gestion_entraineur_supprimer_supprimer_label, FALSE, FALSE, 0);
 
-  ft_gestion_entraineur_supprimer_rechercher_button = gtk_button_new ();
-  gtk_widget_show (ft_gestion_entraineur_supprimer_rechercher_button);
-  gtk_fixed_put (GTK_FIXED (fixed43), ft_gestion_entraineur_supprimer_rechercher_button, 536, 64);
-  gtk_widget_set_size_request (ft_gestion_entraineur_supprimer_rechercher_button, 48, 32);
+  ft_gestion_entraineur_supprimer_annuler_button = gtk_button_new ();
+  gtk_widget_show (ft_gestion_entraineur_supprimer_annuler_button);
+  gtk_fixed_put (GTK_FIXED (fixed43), ft_gestion_entraineur_supprimer_annuler_button, 136, 104);
+  gtk_widget_set_size_request (ft_gestion_entraineur_supprimer_annuler_button, 192, 32);
 
-  ft_gestion_entaineur_supprimer_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (ft_gestion_entaineur_supprimer_rechercher_image);
-  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_supprimer_rechercher_button), ft_gestion_entaineur_supprimer_rechercher_image);
+  alignment47 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment47);
+  gtk_container_add (GTK_CONTAINER (ft_gestion_entraineur_supprimer_annuler_button), alignment47);
+
+  hbox92 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox92);
+  gtk_container_add (GTK_CONTAINER (alignment47), hbox92);
+
+  ft_gestion_entraineur_supprimer_supprimer_annuler_image = gtk_image_new_from_stock ("gtk-stop", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (ft_gestion_entraineur_supprimer_supprimer_annuler_image);
+  gtk_box_pack_start (GTK_BOX (hbox92), ft_gestion_entraineur_supprimer_supprimer_annuler_image, FALSE, FALSE, 0);
+
+  ft_gestion_entraineur_supprimer_annuler_label = gtk_label_new_with_mnemonic (_("Annuler "));
+  gtk_widget_show (ft_gestion_entraineur_supprimer_annuler_label);
+  gtk_box_pack_start (GTK_BOX (hbox92), ft_gestion_entraineur_supprimer_annuler_label, FALSE, FALSE, 0);
 
   ft_gestion_entraineur_supprimer_label = gtk_label_new (_("\360\237\227\221\357\270\217 Supprimer "));
   gtk_widget_show (ft_gestion_entraineur_supprimer_label);
@@ -1775,7 +1777,7 @@ create_espace_administratif (void)
   em_gestion_cours_ajouter_duree_spinbutton_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
   em_gestion_cours_ajouter_duree_spinbutton = gtk_spin_button_new (GTK_ADJUSTMENT (em_gestion_cours_ajouter_duree_spinbutton_adj), 1, 0);
   gtk_widget_show (em_gestion_cours_ajouter_duree_spinbutton);
-  gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_duree_spinbutton, 136, 160);
+  gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_duree_spinbutton, 120, 152);
   gtk_widget_set_size_request (em_gestion_cours_ajouter_duree_spinbutton, 60, 27);
 
   em_gestion_cours_ajouter_nbplaces_spinbutton_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
@@ -1869,6 +1871,11 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_duree_label, 24, 136);
   gtk_widget_set_size_request (em_gestion_cours_ajouter_duree_label, 88, 72);
 
+  em_gestion_cours_ajouter_centre_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (em_gestion_cours_ajouter_centre_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_centre_comboboxentry, 128, 312);
+  gtk_widget_set_size_request (em_gestion_cours_ajouter_centre_comboboxentry, 189, 29);
+
   em_gestion_cours_ajouter_typecours_comboboxentry = gtk_combo_box_entry_new_text ();
   gtk_widget_show (em_gestion_cours_ajouter_typecours_comboboxentry);
   gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_typecours_comboboxentry, 120, 192);
@@ -1878,11 +1885,6 @@ create_espace_administratif (void)
   gtk_widget_show (em_gestion_cours_ajouter_nomentraineur_comboboxentry);
   gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_nomentraineur_comboboxentry, 144, 232);
   gtk_widget_set_size_request (em_gestion_cours_ajouter_nomentraineur_comboboxentry, 189, 29);
-
-  em_gestion_cours_ajouter_centre_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (em_gestion_cours_ajouter_centre_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed7), em_gestion_cours_ajouter_centre_comboboxentry, 128, 312);
-  gtk_widget_set_size_request (em_gestion_cours_ajouter_centre_comboboxentry, 189, 29);
 
   em_gestion_cours_ajouter_enregistrer_button = gtk_button_new ();
   gtk_widget_show (em_gestion_cours_ajouter_enregistrer_button);
@@ -1978,6 +1980,15 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed58), label710, 176, 128);
   gtk_widget_set_size_request (label710, 24, 24);
 
+  em_gestion_cours_modifier_rechercher_button = gtk_button_new ();
+  gtk_widget_show (em_gestion_cours_modifier_rechercher_button);
+  gtk_fixed_put (GTK_FIXED (fixed58), em_gestion_cours_modifier_rechercher_button, 472, 24);
+  gtk_widget_set_size_request (em_gestion_cours_modifier_rechercher_button, 32, 32);
+
+  em_gestion_cours_modifier_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (em_gestion_cours_modifier_rechercher_image);
+  gtk_container_add (GTK_CONTAINER (em_gestion_cours_modifier_rechercher_button), em_gestion_cours_modifier_rechercher_image);
+
   em_gestion_cours_modifier_datecours_mois_label = gtk_label_new (_("mm"));
   gtk_widget_show (em_gestion_cours_modifier_datecours_mois_label);
   gtk_fixed_put (GTK_FIXED (fixed58), em_gestion_cours_modifier_datecours_mois_label, 184, 152);
@@ -2043,15 +2054,6 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed58), em_gestion_cours_modifier_datecours_jour_label, 112, 160);
   gtk_widget_set_size_request (em_gestion_cours_modifier_datecours_jour_label, 24, 24);
 
-  em_gestion_cours_modifier_rechercher_button = gtk_button_new ();
-  gtk_widget_show (em_gestion_cours_modifier_rechercher_button);
-  gtk_fixed_put (GTK_FIXED (fixed58), em_gestion_cours_modifier_rechercher_button, 472, 24);
-  gtk_widget_set_size_request (em_gestion_cours_modifier_rechercher_button, 32, 32);
-
-  em_gestion_cours_modifier_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (em_gestion_cours_modifier_rechercher_image);
-  gtk_container_add (GTK_CONTAINER (em_gestion_cours_modifier_rechercher_button), em_gestion_cours_modifier_rechercher_image);
-
   em_gestion_cours_modifier_typecours_comboboxentry = gtk_combo_box_entry_new_text ();
   gtk_widget_show (em_gestion_cours_modifier_typecours_comboboxentry);
   gtk_fixed_put (GTK_FIXED (fixed58), em_gestion_cours_modifier_typecours_comboboxentry, 144, 240);
@@ -2111,15 +2113,15 @@ create_espace_administratif (void)
   gtk_widget_show (em_gestion_cours_supprimer_rechercher_image);
   gtk_container_add (GTK_CONTAINER (em_gestion_cours_supprimer_rechercher_button), em_gestion_cours_supprimer_rechercher_image);
 
+  em_gestion_cours_supprimer_rechercher_label = gtk_label_new (_("Rechercher le Cours  \303\240 supprimer  "));
+  gtk_widget_show (em_gestion_cours_supprimer_rechercher_label);
+  gtk_fixed_put (GTK_FIXED (fixed53), em_gestion_cours_supprimer_rechercher_label, 104, 24);
+  gtk_widget_set_size_request (em_gestion_cours_supprimer_rechercher_label, 448, 32);
+
   em_gestion_cours_supprimer_id_label = gtk_label_new (_("ID : "));
   gtk_widget_show (em_gestion_cours_supprimer_id_label);
   gtk_fixed_put (GTK_FIXED (fixed53), em_gestion_cours_supprimer_id_label, 80, 64);
   gtk_widget_set_size_request (em_gestion_cours_supprimer_id_label, 64, 32);
-
-  em_gestion_cours_titre_supprimer_rechercher_label = gtk_label_new (_("Rechercher le Cours  \303\240 supprimer  "));
-  gtk_widget_show (em_gestion_cours_titre_supprimer_rechercher_label);
-  gtk_fixed_put (GTK_FIXED (fixed53), em_gestion_cours_titre_supprimer_rechercher_label, 104, 24);
-  gtk_widget_set_size_request (em_gestion_cours_titre_supprimer_rechercher_label, 448, 32);
 
   em_gestion_cours_supprimer_annuler_button = gtk_button_new ();
   gtk_widget_show (em_gestion_cours_supprimer_annuler_button);
@@ -2213,6 +2215,26 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_qtdispo_spinbutton, 136, 312);
   gtk_widget_set_size_request (in_gestion_equipement_ajouter_qtdispo_spinbutton, 60, 27);
 
+  in_gestion_equipement_ajouter_idequipement_entry = gtk_entry_new ();
+  gtk_widget_show (in_gestion_equipement_ajouter_idequipement_entry);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_idequipement_entry, 136, 64);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_idequipement_entry, 208, 32);
+  gtk_entry_set_invisible_char (GTK_ENTRY (in_gestion_equipement_ajouter_idequipement_entry), 8226);
+
+  in_gestion_equipement_ajouter_enpanne_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En panne "));
+  gtk_widget_show (in_gestion_equipement_ajouter_enpanne_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_enpanne_radiobutton, 144, 272);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_enpanne_radiobutton, 124, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enpanne_radiobutton), in_gestion_equipement_ajouter_enpanne_radiobutton_group);
+  in_gestion_equipement_ajouter_enpanne_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enpanne_radiobutton));
+
+  in_gestion_equipement_ajouter_enmaintenance_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En maintenance "));
+  gtk_widget_show (in_gestion_equipement_ajouter_enmaintenance_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_enmaintenance_radiobutton, 232, 272);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_enmaintenance_radiobutton, 144, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enmaintenance_radiobutton), in_gestion_equipement_ajouter_enpanne_radiobutton_group);
+  in_gestion_equipement_ajouter_enpanne_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enmaintenance_radiobutton));
+
   in_gestion_equipement_ajouter_liste_scrolledwindow = gtk_scrolled_window_new (NULL, NULL);
   gtk_widget_show (in_gestion_equipement_ajouter_liste_scrolledwindow);
   gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_liste_scrolledwindow, 376, 112);
@@ -2222,10 +2244,32 @@ create_espace_administratif (void)
   gtk_widget_show (in_gestion_equipement_ajouter_liste_treeview);
   gtk_container_add (GTK_CONTAINER (in_gestion_equipement_ajouter_liste_scrolledwindow), in_gestion_equipement_ajouter_liste_treeview);
 
+  in_gestion_equipement_ajouter_disponible_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Disponible "));
+  gtk_widget_show (in_gestion_equipement_ajouter_disponible_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_disponible_radiobutton, 48, 272);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_disponible_radiobutton, 124, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_disponible_radiobutton), in_gestion_equipement_ajouter_enpanne_radiobutton_group);
+  in_gestion_equipement_ajouter_enpanne_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_disponible_radiobutton));
+
+  in_gestion_equipement_ajouter_categorie_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (in_gestion_equipement_ajouter_categorie_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_categorie_comboboxentry, 136, 144);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_categorie_comboboxentry, 189, 29);
+
+  in_gestion_equipement_ajouter_centre_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (in_gestion_equipement_ajouter_centre_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_centre_comboboxentry, 136, 352);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_centre_comboboxentry, 205, 29);
+
   in_gestion_equipement_ajouter_intro_label = gtk_label_new (_("\360\237\233\240\357\270\217 Ajouter un nouvel \303\251quipement : "));
   gtk_widget_show (in_gestion_equipement_ajouter_intro_label);
   gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_intro_label, 8, 24);
   gtk_widget_set_size_request (in_gestion_equipement_ajouter_intro_label, 288, 16);
+
+  in_gestion_equipement_ajouter_idequipement_label = gtk_label_new (_("ID equipement :"));
+  gtk_widget_show (in_gestion_equipement_ajouter_idequipement_label);
+  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_idequipement_label, 24, 64);
+  gtk_widget_set_size_request (in_gestion_equipement_ajouter_idequipement_label, 112, 32);
 
   in_gestion_equipement_ajouter_nomequipement_label = gtk_label_new (_("       Nom de\nl'\303\251quipement : "));
   gtk_widget_show (in_gestion_equipement_ajouter_nomequipement_label);
@@ -2262,42 +2306,6 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_liste_label, 408, 88);
   gtk_widget_set_size_request (in_gestion_equipement_ajouter_liste_label, 201, 16);
 
-  in_gestion_equipement_ajouter_centre_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (in_gestion_equipement_ajouter_centre_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_centre_comboboxentry, 136, 352);
-  gtk_widget_set_size_request (in_gestion_equipement_ajouter_centre_comboboxentry, 205, 29);
-
-  in_gestion_equipement_ajouter_enmaintenance_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En maintenance "));
-  gtk_widget_show (in_gestion_equipement_ajouter_enmaintenance_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_enmaintenance_radiobutton, 232, 272);
-  gtk_widget_set_size_request (in_gestion_equipement_ajouter_enmaintenance_radiobutton, 144, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enmaintenance_radiobutton), in_gestion_equipement_ajouter_enmaintenance_radiobutton_group);
-  in_gestion_equipement_ajouter_enmaintenance_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enmaintenance_radiobutton));
-
-  in_gestion_equipement_ajouter_enpanne_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En panne "));
-  gtk_widget_show (in_gestion_equipement_ajouter_enpanne_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_enpanne_radiobutton, 144, 272);
-  gtk_widget_set_size_request (in_gestion_equipement_ajouter_enpanne_radiobutton, 124, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enpanne_radiobutton), in_gestion_equipement_ajouter_enmaintenance_radiobutton_group);
-  in_gestion_equipement_ajouter_enmaintenance_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_enpanne_radiobutton));
-
-  in_gestion_equipement_ajouter_disponible_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Disponible "));
-  gtk_widget_show (in_gestion_equipement_ajouter_disponible_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_disponible_radiobutton, 48, 272);
-  gtk_widget_set_size_request (in_gestion_equipement_ajouter_disponible_radiobutton, 124, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_disponible_radiobutton), in_gestion_equipement_ajouter_enmaintenance_radiobutton_group);
-  in_gestion_equipement_ajouter_enmaintenance_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_ajouter_disponible_radiobutton));
-
-  in_gestion_equipement_ajouter_categorie_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (in_gestion_equipement_ajouter_categorie_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_categorie_comboboxentry, 136, 144);
-  gtk_widget_set_size_request (in_gestion_equipement_ajouter_categorie_comboboxentry, 189, 29);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_ajouter_categorie_comboboxentry), _("Cardio"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_ajouter_categorie_comboboxentry), _("Musculation_Libre"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_ajouter_categorie_comboboxentry), _("Crossfit"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_ajouter_categorie_comboboxentry), _("Espace_Fitness"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_ajouter_categorie_comboboxentry), _("Sport_de_Combat"));
-
   in_gestion_equipement_ajouter_enregistrer_button = gtk_button_new ();
   gtk_widget_show (in_gestion_equipement_ajouter_enregistrer_button);
   gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_enregistrer_button, 8, 408);
@@ -2318,11 +2326,6 @@ create_espace_administratif (void)
   in_gestion_equipement_ajouter_enregistrer_label = gtk_label_new_with_mnemonic (_("Enregistrer"));
   gtk_widget_show (in_gestion_equipement_ajouter_enregistrer_label);
   gtk_box_pack_start (GTK_BOX (hbox119), in_gestion_equipement_ajouter_enregistrer_label, FALSE, FALSE, 0);
-
-  in_gestion_equipement_ajouter_actualiser_button = gtk_button_new_with_mnemonic (_("Actualiser"));
-  gtk_widget_show (in_gestion_equipement_ajouter_actualiser_button);
-  gtk_fixed_put (GTK_FIXED (fixed15), in_gestion_equipement_ajouter_actualiser_button, 448, 376);
-  gtk_widget_set_size_request (in_gestion_equipement_ajouter_actualiser_button, 82, 29);
 
   in_gestion_equipement_ajouter_label = gtk_label_new (_("\342\234\232 Ajouter "));
   gtk_widget_show (in_gestion_equipement_ajouter_label);
@@ -2352,11 +2355,51 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_qtdispo_spinbutton, 136, 312);
   gtk_widget_set_size_request (in_gestion_equipement_modifier_qtdispo_spinbutton, 60, 27);
 
+  radiobutton84 = gtk_radio_button_new_with_mnemonic (NULL, _("En maintenance "));
+  gtk_widget_show (radiobutton84);
+  gtk_fixed_put (GTK_FIXED (fixed59), radiobutton84, 336, 272);
+  gtk_widget_set_size_request (radiobutton84, 144, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (radiobutton84), in_gestion_equipement_ajouter_enpanne_radiobutton_group);
+  in_gestion_equipement_ajouter_enpanne_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (radiobutton84));
+
   in_gestion_equipement_modifier_rechercher_entry = gtk_entry_new ();
   gtk_widget_show (in_gestion_equipement_modifier_rechercher_entry);
   gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_rechercher_entry, 248, 24);
   gtk_widget_set_size_request (in_gestion_equipement_modifier_rechercher_entry, 224, 32);
   gtk_entry_set_invisible_char (GTK_ENTRY (in_gestion_equipement_modifier_rechercher_entry), 8226);
+
+  in_gestion_equipement_modifier_rechercher_button = gtk_button_new ();
+  gtk_widget_show (in_gestion_equipement_modifier_rechercher_button);
+  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_rechercher_button, 472, 24);
+  gtk_widget_set_size_request (in_gestion_equipement_modifier_rechercher_button, 32, 32);
+
+  in_gestion_equipement_modifier_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (in_gestion_equipement_modifier_rechercher_image);
+  gtk_container_add (GTK_CONTAINER (in_gestion_equipement_modifier_rechercher_button), in_gestion_equipement_modifier_rechercher_image);
+
+  in_gestion_equipement_modifier_categorie_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (in_gestion_equipement_modifier_categorie_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_categorie_comboboxentry, 136, 144);
+  gtk_widget_set_size_request (in_gestion_equipement_modifier_categorie_comboboxentry, 189, 29);
+
+  in_gestion_equipement_modifier_disponible_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Disponible "));
+  gtk_widget_show (in_gestion_equipement_modifier_disponible_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_disponible_radiobutton, 136, 272);
+  gtk_widget_set_size_request (in_gestion_equipement_modifier_disponible_radiobutton, 124, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_disponible_radiobutton), in_gestion_equipement_modifier_disponible_radiobutton_group);
+  in_gestion_equipement_modifier_disponible_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_disponible_radiobutton));
+
+  in_gestion_equipement_modifier_enpanne_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En panne "));
+  gtk_widget_show (in_gestion_equipement_modifier_enpanne_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_enpanne_radiobutton, 240, 272);
+  gtk_widget_set_size_request (in_gestion_equipement_modifier_enpanne_radiobutton, 124, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_enpanne_radiobutton), in_gestion_equipement_ajouter_enpanne_radiobutton_group);
+  in_gestion_equipement_ajouter_enpanne_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_enpanne_radiobutton));
+
+  in_gestion_equipement_modifier_centre_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (in_gestion_equipement_modifier_centre_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_centre_comboboxentry, 144, 352);
+  gtk_widget_set_size_request (in_gestion_equipement_modifier_centre_comboboxentry, 197, 29);
 
   in_gestion_equipement_modifier_rechercher_label = gtk_label_new (_("Rechercher un Equipement  ID :"));
   gtk_widget_show (in_gestion_equipement_modifier_rechercher_label);
@@ -2393,15 +2436,6 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_centre_label, 56, 344);
   gtk_widget_set_size_request (in_gestion_equipement_modifier_centre_label, 112, 40);
 
-  in_gestion_equipement_modifier_rechercher_button = gtk_button_new ();
-  gtk_widget_show (in_gestion_equipement_modifier_rechercher_button);
-  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_rechercher_button, 472, 24);
-  gtk_widget_set_size_request (in_gestion_equipement_modifier_rechercher_button, 32, 32);
-
-  in_gestion_equipement_modifier_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (in_gestion_equipement_modifier_rechercher_image);
-  gtk_container_add (GTK_CONTAINER (in_gestion_equipement_modifier_rechercher_button), in_gestion_equipement_modifier_rechercher_image);
-
   in_gestion_equipement_modifier_enregistrer_button = gtk_button_new ();
   gtk_widget_show (in_gestion_equipement_modifier_enregistrer_button);
   gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_enregistrer_button, 8, 408);
@@ -2423,42 +2457,6 @@ create_espace_administratif (void)
   gtk_widget_show (in_gestion_equipement_modifier_enregistrer_label);
   gtk_box_pack_start (GTK_BOX (hbox123), in_gestion_equipement_modifier_enregistrer_label, FALSE, FALSE, 0);
 
-  in_gestion_equipement_modifier_centre_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (in_gestion_equipement_modifier_centre_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_centre_comboboxentry, 144, 352);
-  gtk_widget_set_size_request (in_gestion_equipement_modifier_centre_comboboxentry, 197, 29);
-
-  in_gestion_equipement_modifier_disponible_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Disponible "));
-  gtk_widget_show (in_gestion_equipement_modifier_disponible_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_disponible_radiobutton, 136, 272);
-  gtk_widget_set_size_request (in_gestion_equipement_modifier_disponible_radiobutton, 124, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_disponible_radiobutton), in_gestion_equipement_modifier_disponible_radiobutton_group);
-  in_gestion_equipement_modifier_disponible_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_disponible_radiobutton));
-
-  in_gestion_equipement_modifier_enpanne_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En panne "));
-  gtk_widget_show (in_gestion_equipement_modifier_enpanne_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_enpanne_radiobutton, 240, 272);
-  gtk_widget_set_size_request (in_gestion_equipement_modifier_enpanne_radiobutton, 124, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_enpanne_radiobutton), in_gestion_equipement_ajouter_enmaintenance_radiobutton_group);
-  in_gestion_equipement_ajouter_enmaintenance_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_enpanne_radiobutton));
-
-  in_gestion_equipement_modifier_categorie_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (in_gestion_equipement_modifier_categorie_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_categorie_comboboxentry, 136, 144);
-  gtk_widget_set_size_request (in_gestion_equipement_modifier_categorie_comboboxentry, 189, 29);
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_modifier_categorie_comboboxentry), _("Cardio"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_modifier_categorie_comboboxentry), _("Musculation_Libre"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_modifier_categorie_comboboxentry), _("Crossfit"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_modifier_categorie_comboboxentry), _("Espace_Fitness"));
-  gtk_combo_box_append_text (GTK_COMBO_BOX (in_gestion_equipement_modifier_categorie_comboboxentry), _("Sport_de_Combat"));
-
-  in_gestion_equipement_modifier_enmaintenance_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("En maintenance "));
-  gtk_widget_show (in_gestion_equipement_modifier_enmaintenance_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed59), in_gestion_equipement_modifier_enmaintenance_radiobutton, 336, 272);
-  gtk_widget_set_size_request (in_gestion_equipement_modifier_enmaintenance_radiobutton, 144, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_enmaintenance_radiobutton), in_gestion_equipement_ajouter_enmaintenance_radiobutton_group);
-  in_gestion_equipement_ajouter_enmaintenance_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (in_gestion_equipement_modifier_enmaintenance_radiobutton));
-
   in_gestion_equipement_modifier_label = gtk_label_new (_("\342\234\217\357\270\217 Modifier "));
   gtk_widget_show (in_gestion_equipement_modifier_label);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (in_gestion_equipement_notebook), gtk_notebook_get_nth_page (GTK_NOTEBOOK (in_gestion_equipement_notebook), 2), in_gestion_equipement_modifier_label);
@@ -2477,6 +2475,15 @@ create_espace_administratif (void)
   gtk_widget_show (in_gestion_equipement_supprimer_id_label);
   gtk_fixed_put (GTK_FIXED (fixed54), in_gestion_equipement_supprimer_id_label, 80, 64);
   gtk_widget_set_size_request (in_gestion_equipement_supprimer_id_label, 64, 32);
+
+  in_gestion_equipement_supprimer_rechercher_button = gtk_button_new ();
+  gtk_widget_show (in_gestion_equipement_supprimer_rechercher_button);
+  gtk_fixed_put (GTK_FIXED (fixed54), in_gestion_equipement_supprimer_rechercher_button, 536, 64);
+  gtk_widget_set_size_request (in_gestion_equipement_supprimer_rechercher_button, 48, 32);
+
+  in_gestion_equipement_supprimer_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (in_gestion_equipement_supprimer_rechercher_image);
+  gtk_container_add (GTK_CONTAINER (in_gestion_equipement_supprimer_rechercher_button), in_gestion_equipement_supprimer_rechercher_image);
 
   in_gestion_equipement_supprimer_rechercher_label = gtk_label_new (_("Rechercher l'equipement \303\240 supprimer  "));
   gtk_widget_show (in_gestion_equipement_supprimer_rechercher_label);
@@ -2504,18 +2511,9 @@ create_espace_administratif (void)
   gtk_widget_show (in_gestion_equipement_supprimer_annuler_label);
   gtk_box_pack_start (GTK_BOX (hbox110), in_gestion_equipement_supprimer_annuler_label, FALSE, FALSE, 0);
 
-  in_gestion_equipement_supprimer_rechercher_button = gtk_button_new ();
-  gtk_widget_show (in_gestion_equipement_supprimer_rechercher_button);
-  gtk_fixed_put (GTK_FIXED (fixed54), in_gestion_equipement_supprimer_rechercher_button, 536, 64);
-  gtk_widget_set_size_request (in_gestion_equipement_supprimer_rechercher_button, 48, 32);
-
-  in_gestion_equipement_supprimer_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (in_gestion_equipement_supprimer_rechercher_image);
-  gtk_container_add (GTK_CONTAINER (in_gestion_equipement_supprimer_rechercher_button), in_gestion_equipement_supprimer_rechercher_image);
-
   in_gestion_equipement_supprimer_supprimer_button = gtk_button_new ();
   gtk_widget_show (in_gestion_equipement_supprimer_supprimer_button);
-  gtk_fixed_put (GTK_FIXED (fixed54), in_gestion_equipement_supprimer_supprimer_button, 352, 104);
+  gtk_fixed_put (GTK_FIXED (fixed54), in_gestion_equipement_supprimer_supprimer_button, 344, 104);
   gtk_widget_set_size_request (in_gestion_equipement_supprimer_supprimer_button, 184, 32);
 
   alignment66 = gtk_alignment_new (0.5, 0.5, 0, 0);
@@ -2571,23 +2569,21 @@ create_espace_administratif (void)
   gtk_widget_show (nl_gestion_centre_ajouter_nblimite_spinbutton);
   gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_nblimite_spinbutton, 184, 184);
   gtk_widget_set_size_request (nl_gestion_centre_ajouter_nblimite_spinbutton, 60, 27);
+  gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (nl_gestion_centre_ajouter_nblimite_spinbutton), TRUE);
 
-  nl_gestion_centre_ajouter_ouverture_spinbutton_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
+  nl_gestion_centre_ajouter_ouverture_spinbutton_adj = gtk_adjustment_new (1, 0, 24, 1, 10, 10);
   nl_gestion_centre_ajouter_ouverture_spinbutton = gtk_spin_button_new (GTK_ADJUSTMENT (nl_gestion_centre_ajouter_ouverture_spinbutton_adj), 1, 0);
   gtk_widget_show (nl_gestion_centre_ajouter_ouverture_spinbutton);
   gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_ouverture_spinbutton, 168, 144);
   gtk_widget_set_size_request (nl_gestion_centre_ajouter_ouverture_spinbutton, 60, 27);
+  gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (nl_gestion_centre_ajouter_ouverture_spinbutton), TRUE);
 
-  nl_gestion_centre_ajouter_fermeture_button_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
+  nl_gestion_centre_ajouter_fermeture_button_adj = gtk_adjustment_new (1, 0, 24, 1, 10, 10);
   nl_gestion_centre_ajouter_fermeture_button = gtk_spin_button_new (GTK_ADJUSTMENT (nl_gestion_centre_ajouter_fermeture_button_adj), 1, 0);
   gtk_widget_show (nl_gestion_centre_ajouter_fermeture_button);
   gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_fermeture_button, 256, 144);
   gtk_widget_set_size_request (nl_gestion_centre_ajouter_fermeture_button, 60, 27);
-
-  vseparator1 = gtk_vseparator_new ();
-  gtk_widget_show (vseparator1);
-  gtk_fixed_put (GTK_FIXED (fixed37), vseparator1, 336, 16);
-  gtk_widget_set_size_request (vseparator1, 16, 400);
+  gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (nl_gestion_centre_ajouter_fermeture_button), TRUE);
 
   nl_gestion_centre_ajouter_liste_label = gtk_label_new (_("\360\237\223\215Liste des Centres : "));
   gtk_widget_show (nl_gestion_centre_ajouter_liste_label);
@@ -2628,11 +2624,6 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_horaire_label, 48, 144);
   gtk_widget_set_size_request (nl_gestion_centre_ajouter_horaire_label, 150, 24);
 
-  nl_gestion_centre_ajouter_nblimite_label = gtk_label_new (_("     nombre de  : \nmembres limites "));
-  gtk_widget_show (nl_gestion_centre_ajouter_nblimite_label);
-  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_nblimite_label, 48, 168);
-  gtk_widget_set_size_request (nl_gestion_centre_ajouter_nblimite_label, 144, 56);
-
   nl_gestion_centre_ajouter_type_label = gtk_label_new (_("Type : "));
   gtk_widget_show (nl_gestion_centre_ajouter_type_label);
   gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_type_label, 72, 232);
@@ -2643,10 +2634,25 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_activite_label, 64, 304);
   gtk_widget_set_size_request (nl_gestion_centre_ajouter_activite_label, 96, 40);
 
-  nl_gestion_centre_ajouter_localisation_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (nl_gestion_centre_ajouter_localisation_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_localisation_comboboxentry, 176, 80);
-  gtk_widget_set_size_request (nl_gestion_centre_ajouter_localisation_comboboxentry, 160, 24);
+  nl_gestion_centre_ajouter_nblimite_label = gtk_label_new (_("     nombre de  : \nmembres limites "));
+  gtk_widget_show (nl_gestion_centre_ajouter_nblimite_label);
+  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_nblimite_label, 48, 168);
+  gtk_widget_set_size_request (nl_gestion_centre_ajouter_nblimite_label, 144, 56);
+
+  nl_gestion_centre_ajouter_entrainement_checkbutton = gtk_check_button_new_with_mnemonic (_("Entrainement "));
+  gtk_widget_show (nl_gestion_centre_ajouter_entrainement_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_entrainement_checkbutton, 160, 296);
+  gtk_widget_set_size_request (nl_gestion_centre_ajouter_entrainement_checkbutton, 126, 24);
+
+  nl_gestion_centre_ajouter_defoulement_checkbutton = gtk_check_button_new_with_mnemonic (_("Defoulement "));
+  gtk_widget_show (nl_gestion_centre_ajouter_defoulement_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_defoulement_checkbutton, 160, 328);
+  gtk_widget_set_size_request (nl_gestion_centre_ajouter_defoulement_checkbutton, 126, 24);
+
+  vseparator1 = gtk_vseparator_new ();
+  gtk_widget_show (vseparator1);
+  gtk_fixed_put (GTK_FIXED (fixed37), vseparator1, 336, 16);
+  gtk_widget_set_size_request (vseparator1, 16, 400);
 
   nl_gestion_centre_ajouter_community_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Community center "));
   gtk_widget_show (nl_gestion_centre_ajouter_community_radiobutton);
@@ -2662,15 +2668,34 @@ create_espace_administratif (void)
   gtk_radio_button_set_group (GTK_RADIO_BUTTON (nl_gestion_centre_ajouter_training_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
   nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (nl_gestion_centre_ajouter_training_radiobutton));
 
-  nl_gestion_centre_ajouter_entrainement_checkbutton = gtk_check_button_new_with_mnemonic (_("Entrainement "));
-  gtk_widget_show (nl_gestion_centre_ajouter_entrainement_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_entrainement_checkbutton, 160, 296);
-  gtk_widget_set_size_request (nl_gestion_centre_ajouter_entrainement_checkbutton, 126, 24);
-
-  nl_gestion_centre_ajouter_defoulement_checkbutton = gtk_check_button_new_with_mnemonic (_("Defoulement "));
-  gtk_widget_show (nl_gestion_centre_ajouter_defoulement_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_defoulement_checkbutton, 160, 328);
-  gtk_widget_set_size_request (nl_gestion_centre_ajouter_defoulement_checkbutton, 126, 24);
+  nl_gestion_centre_ajouter_localisation_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (nl_gestion_centre_ajouter_localisation_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_localisation_comboboxentry, 176, 80);
+  gtk_widget_set_size_request (nl_gestion_centre_ajouter_localisation_comboboxentry, 160, 24);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Ariana"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("B\303\251ja"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Ben_Arous"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Bizerte"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Gab\303\250s"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Gafsa"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Jendouba"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Kairouan"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Kasserine"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("K\303\251bili"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Kef"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Mahdia"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Manouba"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Medenine"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Monastir"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Nabeul"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Sfax"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Sidi_Bouzid"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Siliana"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Sousse"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Tataouine"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Tozeur"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Tunis"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_ajouter_localisation_comboboxentry), _("Zaghouan"));
 
   nl_gestion_centre_ajouter_enregistrer_button = gtk_button_new ();
   gtk_widget_show (nl_gestion_centre_ajouter_enregistrer_button);
@@ -2693,6 +2718,11 @@ create_espace_administratif (void)
   gtk_widget_show (nl_gestion_centre_ajouter_enregistrer_label);
   gtk_box_pack_start (GTK_BOX (hbox121), nl_gestion_centre_ajouter_enregistrer_label, FALSE, FALSE, 0);
 
+  nl_gestion_centre_ajouter_actualiser_button = gtk_button_new_with_mnemonic (_("Actualiser"));
+  gtk_widget_show (nl_gestion_centre_ajouter_actualiser_button);
+  gtk_fixed_put (GTK_FIXED (fixed37), nl_gestion_centre_ajouter_actualiser_button, 440, 336);
+  gtk_widget_set_size_request (nl_gestion_centre_ajouter_actualiser_button, 82, 29);
+
   nl_gestion_centre_ajouter_label = gtk_label_new (_("\342\234\232 Ajouter "));
   gtk_widget_show (nl_gestion_centre_ajouter_label);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook11), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook11), 1), nl_gestion_centre_ajouter_label);
@@ -2712,18 +2742,21 @@ create_espace_administratif (void)
   gtk_widget_show (nl_gestion_centre_modifier_nblimite_spinbutton);
   gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_nblimite_spinbutton, 184, 232);
   gtk_widget_set_size_request (nl_gestion_centre_modifier_nblimite_spinbutton, 60, 27);
+  gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (nl_gestion_centre_modifier_nblimite_spinbutton), TRUE);
 
-  nl_gestion_centre_modifier_horaire_spinbutton_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
+  nl_gestion_centre_modifier_horaire_spinbutton_adj = gtk_adjustment_new (1, 0, 24, 1, 10, 10);
   nl_gestion_centre_modifier_horaire_spinbutton = gtk_spin_button_new (GTK_ADJUSTMENT (nl_gestion_centre_modifier_horaire_spinbutton_adj), 1, 0);
   gtk_widget_show (nl_gestion_centre_modifier_horaire_spinbutton);
   gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_horaire_spinbutton, 168, 192);
   gtk_widget_set_size_request (nl_gestion_centre_modifier_horaire_spinbutton, 60, 27);
+  gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (nl_gestion_centre_modifier_horaire_spinbutton), TRUE);
 
-  nl_gestion_centre_modifier_fermeture_spinbutton_adj = gtk_adjustment_new (1, 0, 100, 1, 10, 10);
+  nl_gestion_centre_modifier_fermeture_spinbutton_adj = gtk_adjustment_new (1, 0, 24, 1, 10, 10);
   nl_gestion_centre_modifier_fermeture_spinbutton = gtk_spin_button_new (GTK_ADJUSTMENT (nl_gestion_centre_modifier_fermeture_spinbutton_adj), 1, 0);
   gtk_widget_show (nl_gestion_centre_modifier_fermeture_spinbutton);
   gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_fermeture_spinbutton, 256, 192);
   gtk_widget_set_size_request (nl_gestion_centre_modifier_fermeture_spinbutton, 60, 27);
+  gtk_spin_button_set_wrap (GTK_SPIN_BUTTON (nl_gestion_centre_modifier_fermeture_spinbutton), TRUE);
 
   nl_gestion_centre_modifier_rechercher_entry = gtk_entry_new ();
   gtk_widget_show (nl_gestion_centre_modifier_rechercher_entry);
@@ -2785,35 +2818,6 @@ create_espace_administratif (void)
   gtk_widget_show (nl_gestion_centre_modifier_rechercher_image);
   gtk_container_add (GTK_CONTAINER (nl_gestion_centre_modifier_rechercher_button), nl_gestion_centre_modifier_rechercher_image);
 
-  nl_gestion_centre_modifier_ville_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (nl_gestion_centre_modifier_ville_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_ville_comboboxentry, 144, 128);
-  gtk_widget_set_size_request (nl_gestion_centre_modifier_ville_comboboxentry, 213, 32);
-
-  nl_gestion_centre_modifier_community_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Community center "));
-  gtk_widget_show (nl_gestion_centre_modifier_community_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_community_radiobutton, 160, 264);
-  gtk_widget_set_size_request (nl_gestion_centre_modifier_community_radiobutton, 200, 32);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_community_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
-  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_community_radiobutton));
-
-  nl_gestion_centre_modifier_training_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Training center "));
-  gtk_widget_show (nl_gestion_centre_modifier_training_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_training_radiobutton, 160, 296);
-  gtk_widget_set_size_request (nl_gestion_centre_modifier_training_radiobutton, 152, 24);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_training_radiobutton), nl_gestion_centre_modifier_training_radiobutton_group);
-  nl_gestion_centre_modifier_training_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_training_radiobutton));
-
-  nl_gestion_centre_modifier_entrainement_checkbutton = gtk_check_button_new_with_mnemonic (_("Entrainement "));
-  gtk_widget_show (nl_gestion_centre_modifier_entrainement_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_entrainement_checkbutton, 160, 328);
-  gtk_widget_set_size_request (nl_gestion_centre_modifier_entrainement_checkbutton, 126, 24);
-
-  nl_gestion_centre_modifier_defoulement_checkbutton = gtk_check_button_new_with_mnemonic (_("Defoulement "));
-  gtk_widget_show (nl_gestion_centre_modifier_defoulement_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_defoulement_checkbutton, 160, 360);
-  gtk_widget_set_size_request (nl_gestion_centre_modifier_defoulement_checkbutton, 126, 24);
-
   button144 = gtk_button_new ();
   gtk_widget_show (button144);
   gtk_fixed_put (GTK_FIXED (fixed60), button144, 8, 408);
@@ -2835,6 +2839,59 @@ create_espace_administratif (void)
   gtk_widget_show (label736);
   gtk_box_pack_start (GTK_BOX (hbox124), label736, FALSE, FALSE, 0);
 
+  nl_gestion_centre_modifier_entrainement_checkbutton = gtk_check_button_new_with_mnemonic (_("Entrainement "));
+  gtk_widget_show (nl_gestion_centre_modifier_entrainement_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_entrainement_checkbutton, 160, 328);
+  gtk_widget_set_size_request (nl_gestion_centre_modifier_entrainement_checkbutton, 126, 24);
+
+  nl_gestion_centre_modifier_defoulement_checkbutton = gtk_check_button_new_with_mnemonic (_("Defoulement "));
+  gtk_widget_show (nl_gestion_centre_modifier_defoulement_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_defoulement_checkbutton, 160, 360);
+  gtk_widget_set_size_request (nl_gestion_centre_modifier_defoulement_checkbutton, 126, 24);
+
+  nl_gestion_centre_modifier_community_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Community center "));
+  gtk_widget_show (nl_gestion_centre_modifier_community_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_community_radiobutton, 160, 264);
+  gtk_widget_set_size_request (nl_gestion_centre_modifier_community_radiobutton, 200, 32);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_community_radiobutton), nl_gestion_centre_modifier_community_radiobutton_group);
+  nl_gestion_centre_modifier_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_community_radiobutton));
+
+  nl_gestion_centre_modifier_training_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Training center "));
+  gtk_widget_show (nl_gestion_centre_modifier_training_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_training_radiobutton, 160, 296);
+  gtk_widget_set_size_request (nl_gestion_centre_modifier_training_radiobutton, 152, 24);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_training_radiobutton), nl_gestion_centre_modifier_community_radiobutton_group);
+  nl_gestion_centre_modifier_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (nl_gestion_centre_modifier_training_radiobutton));
+
+  nl_gestion_centre_modifier_ville_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (nl_gestion_centre_modifier_ville_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed60), nl_gestion_centre_modifier_ville_comboboxentry, 144, 128);
+  gtk_widget_set_size_request (nl_gestion_centre_modifier_ville_comboboxentry, 213, 32);
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Ariana"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("B\303\251ja"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Ben_Arous"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Bizerte"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Gab\303\250s"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Gafsa"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Jendouba"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Kairouan"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Kasserine"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("K\303\251bili"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Kef"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Mahdia"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Manouba"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Medenine"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Monastir"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Nabeul"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Sfax"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Sidi_Bouzid"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Siliana"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Sousse"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Tataouine"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Tozeur"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Tunis"));
+  gtk_combo_box_append_text (GTK_COMBO_BOX (nl_gestion_centre_modifier_ville_comboboxentry), _("Zaghouan"));
+
   nl_gestion_centre_modifier_label = gtk_label_new (_("\342\234\217\357\270\217 Modifier "));
   gtk_widget_show (nl_gestion_centre_modifier_label);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook11), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook11), 2), nl_gestion_centre_modifier_label);
@@ -2849,10 +2906,10 @@ create_espace_administratif (void)
   gtk_widget_set_size_request (nl_gestion_centre_supprimer_rechercher_entry, 392, 32);
   gtk_entry_set_invisible_char (GTK_ENTRY (nl_gestion_centre_supprimer_rechercher_entry), 8226);
 
-  nl_gestion_centre_titre_supprimer_label = gtk_label_new (_("Rechercher le centre  \303\240 supprimer  "));
-  gtk_widget_show (nl_gestion_centre_titre_supprimer_label);
-  gtk_fixed_put (GTK_FIXED (fixed55), nl_gestion_centre_titre_supprimer_label, 128, 24);
-  gtk_widget_set_size_request (nl_gestion_centre_titre_supprimer_label, 448, 32);
+  nl_gestion_centre_supprimer_titre_label = gtk_label_new (_("Rechercher le centre  \303\240 supprimer  "));
+  gtk_widget_show (nl_gestion_centre_supprimer_titre_label);
+  gtk_fixed_put (GTK_FIXED (fixed55), nl_gestion_centre_supprimer_titre_label, 128, 24);
+  gtk_widget_set_size_request (nl_gestion_centre_supprimer_titre_label, 448, 32);
 
   nl_gestion_centre_supprimer_rechercher_button = gtk_button_new ();
   gtk_widget_show (nl_gestion_centre_supprimer_rechercher_button);
@@ -2973,10 +3030,31 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_minute_spinbutton, 304, 216);
   gtk_widget_set_size_request (am_gestion_evenement_ajouter_minute_spinbutton, 48, 24);
 
+  am_gestion_evenement_ajouter_sport_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Sport "));
+  gtk_widget_show (am_gestion_evenement_ajouter_sport_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_sport_radiobutton, 152, 136);
+  gtk_widget_set_size_request (am_gestion_evenement_ajouter_sport_radiobutton, 200, 32);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_sport_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
+  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_sport_radiobutton));
+
+  am_gestion_evenement_ajouter_bienetre_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Bien etre "));
+  gtk_widget_show (am_gestion_evenement_ajouter_bienetre_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_bienetre_radiobutton, 320, 136);
+  gtk_widget_set_size_request (am_gestion_evenement_ajouter_bienetre_radiobutton, 144, 32);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_bienetre_radiobutton), am_gestion_evenement_ajouter_bienetre_radiobutton_group);
+  am_gestion_evenement_ajouter_bienetre_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_bienetre_radiobutton));
+
   am_gestion_evenement_ajouter_dateheure_label = gtk_label_new (_("Date et Heure : "));
   gtk_widget_show (am_gestion_evenement_ajouter_dateheure_label);
   gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_dateheure_label, 48, 176);
   gtk_widget_set_size_request (am_gestion_evenement_ajouter_dateheure_label, 104, 40);
+
+  am_gestion_evenement_ajouter_nutrition_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Nutrition "));
+  gtk_widget_show (am_gestion_evenement_ajouter_nutrition_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_nutrition_radiobutton, 224, 136);
+  gtk_widget_set_size_request (am_gestion_evenement_ajouter_nutrition_radiobutton, 200, 32);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_nutrition_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
+  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_nutrition_radiobutton));
 
   am_gestion_evenement_ajouter_annee_label = gtk_label_new (_("ann\303\251e "));
   gtk_widget_show (am_gestion_evenement_ajouter_annee_label);
@@ -2997,6 +3075,11 @@ create_espace_administratif (void)
   gtk_widget_show (am_gestion_evenement_ajouter_heure_label);
   gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_heure_label, 152, 216);
   gtk_widget_set_size_request (am_gestion_evenement_ajouter_heure_label, 150, 24);
+
+  am_gestion_evenement_ajouter_centre_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (am_gestion_evenement_ajouter_centre_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_centre_comboboxentry, 160, 256);
+  gtk_widget_set_size_request (am_gestion_evenement_ajouter_centre_comboboxentry, 213, 32);
 
   am_gestion_evenement_ajouter_id_label = gtk_label_new (_("ID : "));
   gtk_widget_show (am_gestion_evenement_ajouter_id_label);
@@ -3022,32 +3105,6 @@ create_espace_administratif (void)
   gtk_widget_show (am_gestion_evenement_ajouter_centre_label);
   gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_centre_label, 80, 248);
   gtk_widget_set_size_request (am_gestion_evenement_ajouter_centre_label, 112, 40);
-
-  am_gestion_evenement_ajouter_sport_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Sport "));
-  gtk_widget_show (am_gestion_evenement_ajouter_sport_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_sport_radiobutton, 152, 136);
-  gtk_widget_set_size_request (am_gestion_evenement_ajouter_sport_radiobutton, 200, 32);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_sport_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
-  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_sport_radiobutton));
-
-  am_gestion_evenement_ajouter_nutrition_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Nutrition "));
-  gtk_widget_show (am_gestion_evenement_ajouter_nutrition_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_nutrition_radiobutton, 224, 136);
-  gtk_widget_set_size_request (am_gestion_evenement_ajouter_nutrition_radiobutton, 200, 32);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_nutrition_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
-  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_nutrition_radiobutton));
-
-  am_gestion_evenement_ajouter_bienetre_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Bien etre "));
-  gtk_widget_show (am_gestion_evenement_ajouter_bienetre_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_bienetre_radiobutton, 320, 136);
-  gtk_widget_set_size_request (am_gestion_evenement_ajouter_bienetre_radiobutton, 144, 32);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_bienetre_radiobutton), am_gestion_evenement_ajouter_bienetre_radiobutton_group);
-  am_gestion_evenement_ajouter_bienetre_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_ajouter_bienetre_radiobutton));
-
-  am_gestion_evenement_ajouter_centre_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (am_gestion_evenement_ajouter_centre_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed64), am_gestion_evenement_ajouter_centre_comboboxentry, 160, 256);
-  gtk_widget_set_size_request (am_gestion_evenement_ajouter_centre_comboboxentry, 213, 32);
 
   am_gestion_evenement_ajouter_enregistrer_button = gtk_button_new ();
   gtk_widget_show (am_gestion_evenement_ajouter_enregistrer_button);
@@ -3131,12 +3188,28 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_minute_spinbutton, 256, 280);
   gtk_widget_set_size_request (am_gestion_evenement_modifier_minute_spinbutton, 48, 24);
 
+  am_gestion_evenement_modifier_rechercher_button = gtk_button_new ();
+  gtk_widget_show (am_gestion_evenement_modifier_rechercher_button);
+  gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_rechercher_button, 472, 24);
+  gtk_widget_set_size_request (am_gestion_evenement_modifier_rechercher_button, 32, 32);
+
+  am_gestion_evenement_modifier_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (am_gestion_evenement_modifier_rechercher_image);
+  gtk_container_add (GTK_CONTAINER (am_gestion_evenement_modifier_rechercher_button), am_gestion_evenement_modifier_rechercher_image);
+
   am_gestion_evenement_modifier_nutrition_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Nutrition "));
   gtk_widget_show (am_gestion_evenement_modifier_nutrition_radiobutton);
   gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_nutrition_radiobutton, 224, 208);
   gtk_widget_set_size_request (am_gestion_evenement_modifier_nutrition_radiobutton, 200, 32);
   gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_nutrition_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
   nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_nutrition_radiobutton));
+
+  am_gestion_evenement_modifier_sport_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Sport "));
+  gtk_widget_show (am_gestion_evenement_modifier_sport_radiobutton);
+  gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_sport_radiobutton, 152, 208);
+  gtk_widget_set_size_request (am_gestion_evenement_modifier_sport_radiobutton, 200, 32);
+  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_sport_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
+  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_sport_radiobutton));
 
   am_gestion_evenement_modifier_heuredate_label = gtk_label_new (_("Date et Heure : "));
   gtk_widget_show (am_gestion_evenement_modifier_heuredate_label);
@@ -3162,6 +3235,11 @@ create_espace_administratif (void)
   gtk_widget_show (am_gestion_evenement_modifier_heure_label);
   gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_heure_label, 104, 280);
   gtk_widget_set_size_request (am_gestion_evenement_modifier_heure_label, 150, 24);
+
+  am_gestion_evenement_modifier_centre_comboboxentry = gtk_combo_box_entry_new_text ();
+  gtk_widget_show (am_gestion_evenement_modifier_centre_comboboxentry);
+  gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_centre_comboboxentry, 160, 320);
+  gtk_widget_set_size_request (am_gestion_evenement_modifier_centre_comboboxentry, 213, 32);
 
   am_gestion_evenement_modifier_rechercher_label = gtk_label_new (_("Rechercher un Cours   ID : "));
   gtk_widget_show (am_gestion_evenement_modifier_rechercher_label);
@@ -3193,33 +3271,12 @@ create_espace_administratif (void)
   gtk_fixed_put (GTK_FIXED (fixed65), label801, 80, 320);
   gtk_widget_set_size_request (label801, 104, 32);
 
-  am_gestion_evenement_modifier_rechercher_button = gtk_button_new ();
-  gtk_widget_show (am_gestion_evenement_modifier_rechercher_button);
-  gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_rechercher_button, 472, 24);
-  gtk_widget_set_size_request (am_gestion_evenement_modifier_rechercher_button, 32, 32);
-
-  am_gestion_evenement_modifier_rechercher_image = gtk_image_new_from_stock ("gtk-find", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (am_gestion_evenement_modifier_rechercher_image);
-  gtk_container_add (GTK_CONTAINER (am_gestion_evenement_modifier_rechercher_button), am_gestion_evenement_modifier_rechercher_image);
-
   am_gestion_evenement_modifier_bienetre_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Bien etre "));
   gtk_widget_show (am_gestion_evenement_modifier_bienetre_radiobutton);
   gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_bienetre_radiobutton, 320, 208);
   gtk_widget_set_size_request (am_gestion_evenement_modifier_bienetre_radiobutton, 144, 32);
   gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_bienetre_radiobutton), am_gestion_evenement_modifier_bienetre_radiobutton_group);
   am_gestion_evenement_modifier_bienetre_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_bienetre_radiobutton));
-
-  am_gestion_evenement_modifier_sport_radiobutton = gtk_radio_button_new_with_mnemonic (NULL, _("Sport "));
-  gtk_widget_show (am_gestion_evenement_modifier_sport_radiobutton);
-  gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_sport_radiobutton, 152, 208);
-  gtk_widget_set_size_request (am_gestion_evenement_modifier_sport_radiobutton, 200, 32);
-  gtk_radio_button_set_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_sport_radiobutton), nl_gestion_centre_ajouter_community_radiobutton_group);
-  nl_gestion_centre_ajouter_community_radiobutton_group = gtk_radio_button_get_group (GTK_RADIO_BUTTON (am_gestion_evenement_modifier_sport_radiobutton));
-
-  am_gestion_evenement_modifier_centre_comboboxentry = gtk_combo_box_entry_new_text ();
-  gtk_widget_show (am_gestion_evenement_modifier_centre_comboboxentry);
-  gtk_fixed_put (GTK_FIXED (fixed65), am_gestion_evenement_modifier_centre_comboboxentry, 160, 320);
-  gtk_widget_set_size_request (am_gestion_evenement_modifier_centre_comboboxentry, 213, 32);
 
   am_gestion_evenement_modifier_enregistrer_button = gtk_button_new ();
   gtk_widget_show (am_gestion_evenement_modifier_enregistrer_button);
@@ -3256,16 +3313,6 @@ create_espace_administratif (void)
   gtk_widget_set_size_request (am_gestion_evenement_supprimer_id_entry, 392, 32);
   gtk_entry_set_invisible_char (GTK_ENTRY (am_gestion_evenement_supprimer_id_entry), 8226);
 
-  am_gestion_evenement_supprimer_rechercher_label = gtk_label_new (_("Rechercher l'\303\251venement \303\240 supprimer "));
-  gtk_widget_show (am_gestion_evenement_supprimer_rechercher_label);
-  gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_rechercher_label, 184, 24);
-  gtk_widget_set_size_request (am_gestion_evenement_supprimer_rechercher_label, 312, 32);
-
-  am_gestion_evenement_supprimer_id_label = gtk_label_new (_("ID : "));
-  gtk_widget_show (am_gestion_evenement_supprimer_id_label);
-  gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_id_label, 96, 64);
-  gtk_widget_set_size_request (am_gestion_evenement_supprimer_id_label, 48, 32);
-
   am_gestion_evenement_supprimer_rechercher_button = gtk_button_new ();
   gtk_widget_show (am_gestion_evenement_supprimer_rechercher_button);
   gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_rechercher_button, 536, 64);
@@ -3275,26 +3322,15 @@ create_espace_administratif (void)
   gtk_widget_show (am_gestion_evenement_supprimer_rechercher_image);
   gtk_container_add (GTK_CONTAINER (am_gestion_evenement_supprimer_rechercher_button), am_gestion_evenement_supprimer_rechercher_image);
 
-  am_gestion_evenement_supprimer_supprimer_button = gtk_button_new ();
-  gtk_widget_show (am_gestion_evenement_supprimer_supprimer_button);
-  gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_supprimer_button, 344, 104);
-  gtk_widget_set_size_request (am_gestion_evenement_supprimer_supprimer_button, 184, 32);
+  am_gestion_evenement_supprimer_rechercher_label = gtk_label_new (_("Rechercher l'\303\251venement \303\240 supprimer "));
+  gtk_widget_show (am_gestion_evenement_supprimer_rechercher_label);
+  gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_rechercher_label, 184, 24);
+  gtk_widget_set_size_request (am_gestion_evenement_supprimer_rechercher_label, 312, 32);
 
-  alignment83 = gtk_alignment_new (0.5, 0.5, 0, 0);
-  gtk_widget_show (alignment83);
-  gtk_container_add (GTK_CONTAINER (am_gestion_evenement_supprimer_supprimer_button), alignment83);
-
-  hbox128 = gtk_hbox_new (FALSE, 2);
-  gtk_widget_show (hbox128);
-  gtk_container_add (GTK_CONTAINER (alignment83), hbox128);
-
-  am_gestion_evenement_supprimer_supprimer_image = gtk_image_new_from_stock ("gtk-delete", GTK_ICON_SIZE_BUTTON);
-  gtk_widget_show (am_gestion_evenement_supprimer_supprimer_image);
-  gtk_box_pack_start (GTK_BOX (hbox128), am_gestion_evenement_supprimer_supprimer_image, FALSE, FALSE, 0);
-
-  am_gestion_evenement_supprimer_supprimer_label = gtk_label_new_with_mnemonic (_("Supprimer"));
-  gtk_widget_show (am_gestion_evenement_supprimer_supprimer_label);
-  gtk_box_pack_start (GTK_BOX (hbox128), am_gestion_evenement_supprimer_supprimer_label, FALSE, FALSE, 0);
+  am_gestion_evenement_supprimer_id_label = gtk_label_new (_("ID : "));
+  gtk_widget_show (am_gestion_evenement_supprimer_id_label);
+  gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_id_label, 96, 64);
+  gtk_widget_set_size_request (am_gestion_evenement_supprimer_id_label, 48, 32);
 
   am_gestion_evenement_supprimer_annuler_button = gtk_button_new ();
   gtk_widget_show (am_gestion_evenement_supprimer_annuler_button);
@@ -3317,6 +3353,27 @@ create_espace_administratif (void)
   gtk_widget_show (am_gestion_evenement_supprimer_annuler_label);
   gtk_box_pack_start (GTK_BOX (hbox127), am_gestion_evenement_supprimer_annuler_label, FALSE, FALSE, 0);
 
+  am_gestion_evenement_supprimer_supprimer_button = gtk_button_new ();
+  gtk_widget_show (am_gestion_evenement_supprimer_supprimer_button);
+  gtk_fixed_put (GTK_FIXED (fixed63), am_gestion_evenement_supprimer_supprimer_button, 344, 104);
+  gtk_widget_set_size_request (am_gestion_evenement_supprimer_supprimer_button, 184, 32);
+
+  alignment83 = gtk_alignment_new (0.5, 0.5, 0, 0);
+  gtk_widget_show (alignment83);
+  gtk_container_add (GTK_CONTAINER (am_gestion_evenement_supprimer_supprimer_button), alignment83);
+
+  hbox128 = gtk_hbox_new (FALSE, 2);
+  gtk_widget_show (hbox128);
+  gtk_container_add (GTK_CONTAINER (alignment83), hbox128);
+
+  am_gestion_evenement_supprimer_supprimer_image = gtk_image_new_from_stock ("gtk-delete", GTK_ICON_SIZE_BUTTON);
+  gtk_widget_show (am_gestion_evenement_supprimer_supprimer_image);
+  gtk_box_pack_start (GTK_BOX (hbox128), am_gestion_evenement_supprimer_supprimer_image, FALSE, FALSE, 0);
+
+  am_gestion_evenement_supprimer_supprimer_label = gtk_label_new_with_mnemonic (_("Supprimer"));
+  gtk_widget_show (am_gestion_evenement_supprimer_supprimer_label);
+  gtk_box_pack_start (GTK_BOX (hbox128), am_gestion_evenement_supprimer_supprimer_label, FALSE, FALSE, 0);
+
   am_gestion_evenement_supprimer_label = gtk_label_new (_("\360\237\227\221\357\270\217 Supprimer "));
   gtk_widget_show (am_gestion_evenement_supprimer_label);
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (notebook12), gtk_notebook_get_nth_page (GTK_NOTEBOOK (notebook12), 3), am_gestion_evenement_supprimer_label);
@@ -3326,41 +3383,53 @@ create_espace_administratif (void)
   gtk_notebook_set_tab_label (GTK_NOTEBOOK (espace_admin_notebook), gtk_notebook_get_nth_page (GTK_NOTEBOOK (espace_admin_notebook), 5), am_gestion_evenement_label);
   gtk_label_set_use_markup (GTK_LABEL (am_gestion_evenement_label), TRUE);
 
-  g_signal_connect ((gpointer) in_gestion_equipement_ajouter_liste_treeview, "row_activated",
-                    G_CALLBACK (on_in_gestion_equipement_ajouter_liste_treeview_row_activated),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_liste_treeview, "row_activated",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_liste_treeview_row_activated),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_ajouter_enmaintenance_radiobutton, "toggled",
-                    G_CALLBACK (on_in_gestion_equipement_ajouter_enmaintenance_radiobutton_toggled),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_entrainement_checkbutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_entrainement_checkbutton_toggled),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_ajouter_enpanne_radiobutton, "toggled",
-                    G_CALLBACK (on_in_gestion_equipement_ajouter_enpanne_radiobutton_toggled),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_defoulement_checkbutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_defoulement_checkbutton_toggled),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_ajouter_disponible_radiobutton, "toggled",
-                    G_CALLBACK (on_in_gestion_equipement_ajouter_disponible_radiobutton_toggled),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_community_radiobutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_community_radiobutton_toggled),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_ajouter_enregistrer_button, "clicked",
-                    G_CALLBACK (on_in_gestion_equipement_ajouter_enregistrer_button_clicked),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_training_radiobutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_training_radiobutton_toggled),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_ajouter_actualiser_button, "clicked",
-                    G_CALLBACK (on_in_gestion_equipement_ajouter_actualiser_button_clicked),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_enregistrer_button, "clicked",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_enregistrer_button_clicked),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_modifier_rechercher_button, "clicked",
-                    G_CALLBACK (on_in_gestion_equipement_modifier_rechercher_button_clicked),
+  g_signal_connect ((gpointer) nl_gestion_centre_ajouter_actualiser_button, "clicked",
+                    G_CALLBACK (on_nl_gestion_centre_ajouter_actualiser_button_clicked),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_modifier_enregistrer_button, "clicked",
-                    G_CALLBACK (on_in_gestion_equipement_modifier_enregistrer_button_clicked),
+  g_signal_connect ((gpointer) nl_gestion_centre_modifier_rechercher_button, "clicked",
+                    G_CALLBACK (on_nl_gestion_centre_modifier_rechercher_button_clicked),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_modifier_disponible_radiobutton, "toggled",
-                    G_CALLBACK (on_in_gestion_equipement_modifier_disponible_radiobutton_toggled),
+  g_signal_connect ((gpointer) button144, "clicked",
+                    G_CALLBACK (on_button144_clicked),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_modifier_enpanne_radiobutton, "toggled",
-                    G_CALLBACK (on_in_gestion_equipement_modifier_enpanne_radiobutton_toggled),
+  g_signal_connect ((gpointer) nl_gestion_centre_modifier_entrainement_checkbutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_modifier_entrainement_checkbutton_toggled),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_modifier_enmaintenance_radiobutton, "toggled",
-                    G_CALLBACK (on_in_gestion_equipement_modifier_enmaintenance_radiobutton_toggled),
+  g_signal_connect ((gpointer) nl_gestion_centre_modifier_defoulement_checkbutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_modifier_defoulement_checkbutton_toggled),
                     NULL);
-  g_signal_connect ((gpointer) in_gestion_equipement_supprimer_supprimer_button, "clicked",
-                    G_CALLBACK (on_in_gestion_equipement_supprimer_supprimer_button_clicked),
+  g_signal_connect ((gpointer) nl_gestion_centre_modifier_community_radiobutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_modifier_community_radiobutton_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) nl_gestion_centre_modifier_training_radiobutton, "toggled",
+                    G_CALLBACK (on_nl_gestion_centre_modifier_training_radiobutton_toggled),
+                    NULL);
+  g_signal_connect ((gpointer) nl_gestion_centre_supprimer_rechercher_button, "clicked",
+                    G_CALLBACK (on_nl_gestion_centre_supprimer_rechercher_button_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) nl_gestion_centre_supprimer_supprimer_button, "clicked",
+                    G_CALLBACK (on_nl_gestion_centre_supprimer_supprimer_button_clicked),
+                    NULL);
+  g_signal_connect ((gpointer) nl_gestion_centre_supprimer_annuler_button, "clicked",
+                    G_CALLBACK (on_nl_gestion_centre_supprimer_annuler_button_clicked),
                     NULL);
 
   /* Store pointers to all widgets, for use by lookup_widget(). */
@@ -3381,6 +3450,8 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_taille_SpinButton, "mbm_gestion_membre_Ajouter_taille_SpinButton");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_Telephone_entry, "mbm_gestion_membre_Ajouter_Telephone_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_Taille_label, "mbm_gestion_membre_Ajouter_Taille_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_liste_ScrolledWindow, "mbm_gestion_membre_Ajouter_liste_ScrolledWindow");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_liste_TreeView, "mbm_gestion_membre_Ajouter_liste_TreeView");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_nom_label, "mbm_gestion_membre_Ajouter_nom_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_Email_label, "mbm_gestion_membre_Ajouter_Email_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_genre_label, "mbm_gestion_membre_Ajouter_genre_label");
@@ -3393,20 +3464,18 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_poids_label, "mbm_gestion_membre_Ajouter_poids_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_codepostal_label, "mbm_gestion_membre_Ajouter_codepostal_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_formulaire_label, "mbm_gestion_membre_Ajouter_formulaire_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry, "mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_Homme_radiobutton, "mbm_gestion_membre_Ajouter_Homme_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_femme_radiobutton, "mbm_gestion_membre_Ajouter_femme_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_dnd_comboboxentry, "mbm_gestion_membre_Ajouter_dnd_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_conditions_CheckButton, "mbm_gestion_membre_Ajouter_conditions_CheckButton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_newsletter_CheckButton, "mbm_gestion_membre_Ajouter_newsletter_CheckButton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_liste_label, "mbm_gestion_membre_Ajouter_liste_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_liste_ScrolledWindow, "mbm_gestion_membre_Ajouter_liste_ScrolledWindow");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_liste_TreeView, "mbm_gestion_membre_Ajouter_liste_TreeView");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_enregistrer_Button, "mbm_gestion_membre_Ajouter_enregistrer_Button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment45, "alignment45");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox90, "hbox90");
   GLADE_HOOKUP_OBJECT (espace_administratif, image69, "image69");
   GLADE_HOOKUP_OBJECT (espace_administratif, label537, "label537");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_femme_radiobutton, "mbm_gestion_membre_Ajouter_femme_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_dnd_comboboxentry, "mbm_gestion_membre_Ajouter_dnd_comboboxentry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_Homme_radiobutton, "mbm_gestion_membre_Ajouter_Homme_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry, "mbm_gestion_membre_Ajouter_typeabonnement_ComboBoxEntry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_liste_label, "mbm_gestion_membre_Ajouter_liste_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_newsletter_CheckButton, "mbm_gestion_membre_Ajouter_newsletter_CheckButton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_Ajouter_conditions_CheckButton, "mbm_gestion_membre_Ajouter_conditions_CheckButton");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_ajouter_label, "mbm_gestion_membre_ajouter_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed3, "fixed3");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_nom_entry, "mbm_gestion_membre_modifier_nom_entry");
@@ -3435,15 +3504,15 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_codepostal_label, "mbm_gestion_membre_modifier_codepostal_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_rechercher_label, "mbm_gestion_membre_modifier_rechercher_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_formulaire_label, "mbm_gestion_membre_modifier_formulaire_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_rechercher_button, "mbm_gestion_membre_modifier_rechercher_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, image1, "image1");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_typeabonnement_comboboxentry, "mbm_gestion_membre_modifier_typeabonnement_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_dnd_comboboxentry, "mbm_gestion_membre_modifier_dnd_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_enregistrer_button, "mbm_gestion_membre_modifier_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment46, "alignment46");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox91, "hbox91");
   GLADE_HOOKUP_OBJECT (espace_administratif, image70, "image70");
   GLADE_HOOKUP_OBJECT (espace_administratif, label538, "label538");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_typeabonnement_comboboxentry, "mbm_gestion_membre_modifier_typeabonnement_comboboxentry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_dnd_comboboxentry, "mbm_gestion_membre_modifier_dnd_comboboxentry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_rechercher_button, "mbm_gestion_membre_modifier_rechercher_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, image1, "image1");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_modifier_label, "mbm_gestion_membre_modifier_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed4, "fixed4");
   GLADE_HOOKUP_OBJECT (espace_administratif, mbm_gestion_membre_supprimer_id_entry, "mbm_gestion_membre_supprimer_id_entry");
@@ -3468,8 +3537,8 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, label910, "label910");
   GLADE_HOOKUP_OBJECT (espace_administratif, scrolledwindow1, "scrolledwindow1");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_dashboard_treeview, "ft_gestion_entraineur_dashboard_treeview");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_dashboard_title2_label, "ft_gestion_entraineur_dashboard_title2_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_dashboard_title1_label, "ft_gestion_entraineur_dashboard_title1_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_dashboard_title2_label, "ft_gestion_entraineur_dashboard_title2_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, label874, "label874");
   GLADE_HOOKUP_OBJECT (espace_administratif, eventbox1, "eventbox1");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed48, "fixed48");
@@ -3504,16 +3573,16 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_datedebut_jour_label, "ft_gestion_entraineur_ajouter_datedebut_jour_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_datedebut_mois_label, "ft_gestion_entraineur_ajouter_datedebut_mois_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_datedebut_annee_label, "ft_gestion_entraineur_ajouter_datedebut_annee_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_femme_radiobutton, "ft_gestion_entraineur_ajouter_femme_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_homme_radiobutton, "ft_gestion_entraineur_ajouter_homme_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_specialite_comboboxentry, "ft_gestion_entraineur_ajouter_specialite_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_actif_checkbutton, "ft_gestion_entraineur_ajouter_actif_checkbutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_inactif_checkbutton, "ft_gestion_entraineur_ajouter_inactif_checkbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_enregistrer_button, "ft_gestion_entraineur_ajouter_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment58, "alignment58");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox103, "hbox103");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_enregistrer_image, "ft_gestion_entraineur_ajouter_enregistrer_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_enregistrer_label, "ft_gestion_entraineur_ajouter_enregistrer_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_femme_radiobutton, "ft_gestion_entraineur_ajouter_femme_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_homme_radiobutton, "ft_gestion_entraineur_ajouter_homme_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_inactif_checkbutton, "ft_gestion_entraineur_ajouter_inactif_checkbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_specialite_comboboxentry, "ft_gestion_entraineur_ajouter_specialite_comboboxentry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_actif_checkbutton, "ft_gestion_entraineur_ajouter_actif_checkbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_ajouter_label, "ft_gestion_entraineur_ajouter_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed57, "fixed57");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_nomcomplet_entry, "ft_gestion_entraineur_modifier_nomcomplet_entry");
@@ -3548,6 +3617,11 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_info_label, "ft_gestion_entraineur_modifier_info_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_id_display_label, "ft_gestion_entraineur_modifier_id_display_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_msg_label, "ft_gestion_entraineur_modifier_msg_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_enregistrer_button, "ft_gestion_entraineur_modifier_enregistrer_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_datedebut_enregistrer_label, "ft_gestion_entraineur_modifier_datedebut_enregistrer_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, hbox116, "hbox116");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_enregistrer_image, "ft_gestion_entraineur_modifier_enregistrer_image");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_enregistrer_label, "ft_gestion_entraineur_modifier_enregistrer_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_rechercher_button, "ft_gestion_entraineur_modifier_rechercher_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_rechercher_image, "ft_gestion_entraineur_modifier_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_femme_radiobutton, "ft_gestion_entraineur_modifier_femme_radiobutton");
@@ -3555,11 +3629,6 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_specialite_comboboxentry, "ft_gestion_entraineur_modifier_specialite_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_actif_checkbutton, "ft_gestion_entraineur_modifier_actif_checkbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_inactif_checkbutton, "ft_gestion_entraineur_modifier_inactif_checkbutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_enregistrer_button, "ft_gestion_entraineur_modifier_enregistrer_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_datedebut_enregistrer_label, "ft_gestion_entraineur_modifier_datedebut_enregistrer_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, hbox116, "hbox116");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_enregistrer_image, "ft_gestion_entraineur_modifier_enregistrer_image");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_enregistrer_label, "ft_gestion_entraineur_modifier_enregistrer_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_modifier_label, "ft_gestion_entraineur_modifier_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed43, "fixed43");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_id_entry, "ft_gestion_entraineur_supprimer_id_entry");
@@ -3567,18 +3636,18 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_msg_label, "ft_gestion_entraineur_supprimer_msg_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_coachinfo_label, "ft_gestion_entraineur_supprimer_coachinfo_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_rechercher_label, "ft_gestion_entraineur_supprimer_rechercher_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_annuler_button, "ft_gestion_entraineur_supprimer_annuler_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, alignment47, "alignment47");
-  GLADE_HOOKUP_OBJECT (espace_administratif, hbox92, "hbox92");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_supprimer_annuler_image, "ft_gestion_entraineur_supprimer_supprimer_annuler_image");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_annuler_label, "ft_gestion_entraineur_supprimer_annuler_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_rechercher_button, "ft_gestion_entraineur_supprimer_rechercher_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entaineur_supprimer_rechercher_image, "ft_gestion_entaineur_supprimer_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_supprimer_button, "ft_gestion_entraineur_supprimer_supprimer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment48, "alignment48");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox93, "hbox93");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_supprimer_image, "ft_gestion_entraineur_supprimer_supprimer_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_supprimer_label, "ft_gestion_entraineur_supprimer_supprimer_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_rechercher_button, "ft_gestion_entraineur_supprimer_rechercher_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entaineur_supprimer_rechercher_image, "ft_gestion_entaineur_supprimer_rechercher_image");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_annuler_button, "ft_gestion_entraineur_supprimer_annuler_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, alignment47, "alignment47");
+  GLADE_HOOKUP_OBJECT (espace_administratif, hbox92, "hbox92");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_supprimer_annuler_image, "ft_gestion_entraineur_supprimer_supprimer_annuler_image");
+  GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_annuler_label, "ft_gestion_entraineur_supprimer_annuler_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entraineur_supprimer_label, "ft_gestion_entraineur_supprimer_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, ft_gestion_entaineur_label, "ft_gestion_entaineur_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_notebook, "em_gestion_cours_notebook");
@@ -3610,9 +3679,9 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_centre_label, "em_gestion_cours_ajouter_centre_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_liste_label, "em_gestion_cours_ajouter_liste_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_duree_label, "em_gestion_cours_ajouter_duree_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_centre_comboboxentry, "em_gestion_cours_ajouter_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_typecours_comboboxentry, "em_gestion_cours_ajouter_typecours_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_nomentraineur_comboboxentry, "em_gestion_cours_ajouter_nomentraineur_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_centre_comboboxentry, "em_gestion_cours_ajouter_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_ajouter_enregistrer_button, "em_gestion_cours_ajouter_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment72, "alignment72");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox117, "hbox117");
@@ -3631,6 +3700,8 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_idcours_entry, "em_gestion_cours_modifier_idcours_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_rechercher_entry, "em_gestion_cours_modifier_rechercher_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, label710, "label710");
+  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_rechercher_button, "em_gestion_cours_modifier_rechercher_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_rechercher_image, "em_gestion_cours_modifier_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_datecours_mois_label, "em_gestion_cours_modifier_datecours_mois_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_datecours_annee_label, "em_gestion_cours_modifier_datecours_annee_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_rechercher_label, "em_gestion_cours_modifier_rechercher_label");
@@ -3644,8 +3715,6 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_nbplaces_label, "em_gestion_cours_modifier_nbplaces_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_centre_label, "em_gestion_cours_modifier_centre_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_datecours_jour_label, "em_gestion_cours_modifier_datecours_jour_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_rechercher_button, "em_gestion_cours_modifier_rechercher_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_rechercher_image, "em_gestion_cours_modifier_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_typecours_comboboxentry, "em_gestion_cours_modifier_typecours_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_nomentraineur_entry, "em_gestion_cours_modifier_nomentraineur_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_modifier_centre_comboboxentry, "em_gestion_cours_modifier_centre_comboboxentry");
@@ -3659,8 +3728,8 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_supprimer_id_entry, "em_gestion_cours_supprimer_id_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_supprimer_rechercher_button, "em_gestion_cours_supprimer_rechercher_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_supprimer_rechercher_image, "em_gestion_cours_supprimer_rechercher_image");
+  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_supprimer_rechercher_label, "em_gestion_cours_supprimer_rechercher_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_supprimer_id_label, "em_gestion_cours_supprimer_id_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_titre_supprimer_rechercher_label, "em_gestion_cours_titre_supprimer_rechercher_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, em_gestion_cours_supprimer_annuler_button, "em_gestion_cours_supprimer_annuler_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment63, "alignment63");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox108, "hbox108");
@@ -3681,9 +3750,16 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_nomequipement_entry, "in_gestion_equipement_ajouter_nomequipement_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_dateachat_calendar, "in_gestion_equipement_ajouter_dateachat_calendar");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_qtdispo_spinbutton, "in_gestion_equipement_ajouter_qtdispo_spinbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_idequipement_entry, "in_gestion_equipement_ajouter_idequipement_entry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enpanne_radiobutton, "in_gestion_equipement_ajouter_enpanne_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enmaintenance_radiobutton, "in_gestion_equipement_ajouter_enmaintenance_radiobutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_liste_scrolledwindow, "in_gestion_equipement_ajouter_liste_scrolledwindow");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_liste_treeview, "in_gestion_equipement_ajouter_liste_treeview");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_disponible_radiobutton, "in_gestion_equipement_ajouter_disponible_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_categorie_comboboxentry, "in_gestion_equipement_ajouter_categorie_comboboxentry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_centre_comboboxentry, "in_gestion_equipement_ajouter_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_intro_label, "in_gestion_equipement_ajouter_intro_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_idequipement_label, "in_gestion_equipement_ajouter_idequipement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_nomequipement_label, "in_gestion_equipement_ajouter_nomequipement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_categorie_label, "in_gestion_equipement_ajouter_categorie_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_dateachat_label, "in_gestion_equipement_ajouter_dateachat_label");
@@ -3691,23 +3767,24 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_qtdispo_label, "in_gestion_equipement_ajouter_qtdispo_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_centre_label, "in_gestion_equipement_ajouter_centre_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_liste_label, "in_gestion_equipement_ajouter_liste_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_centre_comboboxentry, "in_gestion_equipement_ajouter_centre_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enmaintenance_radiobutton, "in_gestion_equipement_ajouter_enmaintenance_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enpanne_radiobutton, "in_gestion_equipement_ajouter_enpanne_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_disponible_radiobutton, "in_gestion_equipement_ajouter_disponible_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_categorie_comboboxentry, "in_gestion_equipement_ajouter_categorie_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enregistrer_button, "in_gestion_equipement_ajouter_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment74, "alignment74");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox119, "hbox119");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enregistrer_image, "in_gestion_equipement_ajouter_enregistrer_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_enregistrer_label, "in_gestion_equipement_ajouter_enregistrer_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_actualiser_button, "in_gestion_equipement_ajouter_actualiser_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_ajouter_label, "in_gestion_equipement_ajouter_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed59, "fixed59");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_nomequipement_entry, "in_gestion_equipement_modifier_nomequipement_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_dateachat_calendar, "in_gestion_equipement_modifier_dateachat_calendar");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_qtdispo_spinbutton, "in_gestion_equipement_modifier_qtdispo_spinbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, radiobutton84, "radiobutton84");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_rechercher_entry, "in_gestion_equipement_modifier_rechercher_entry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_rechercher_button, "in_gestion_equipement_modifier_rechercher_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_rechercher_image, "in_gestion_equipement_modifier_rechercher_image");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_categorie_comboboxentry, "in_gestion_equipement_modifier_categorie_comboboxentry");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_disponible_radiobutton, "in_gestion_equipement_modifier_disponible_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_enpanne_radiobutton, "in_gestion_equipement_modifier_enpanne_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_centre_comboboxentry, "in_gestion_equipement_modifier_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_rechercher_label, "in_gestion_equipement_modifier_rechercher_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_nomequipement_label, "in_gestion_equipement_modifier_nomequipement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_categorie_label, "in_gestion_equipement_modifier_categorie_label");
@@ -3715,30 +3792,23 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_etat_label, "in_gestion_equipement_modifier_etat_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_qtdispo_label, "in_gestion_equipement_modifier_qtdispo_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_centre_label, "in_gestion_equipement_modifier_centre_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_rechercher_button, "in_gestion_equipement_modifier_rechercher_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_rechercher_image, "in_gestion_equipement_modifier_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_enregistrer_button, "in_gestion_equipement_modifier_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment78, "alignment78");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox123, "hbox123");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_enregistrer_image, "in_gestion_equipement_modifier_enregistrer_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_enregistrer_label, "in_gestion_equipement_modifier_enregistrer_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_centre_comboboxentry, "in_gestion_equipement_modifier_centre_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_disponible_radiobutton, "in_gestion_equipement_modifier_disponible_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_enpanne_radiobutton, "in_gestion_equipement_modifier_enpanne_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_categorie_comboboxentry, "in_gestion_equipement_modifier_categorie_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_enmaintenance_radiobutton, "in_gestion_equipement_modifier_enmaintenance_radiobutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_modifier_label, "in_gestion_equipement_modifier_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed54, "fixed54");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_id_entry, "in_gestion_equipement_supprimer_id_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_id_label, "in_gestion_equipement_supprimer_id_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_rechercher_button, "in_gestion_equipement_supprimer_rechercher_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_rechercher_image, "in_gestion_equipement_supprimer_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_rechercher_label, "in_gestion_equipement_supprimer_rechercher_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_annuler_button, "in_gestion_equipement_supprimer_annuler_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment65, "alignment65");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox110, "hbox110");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_annuler_image, "in_gestion_equipement_supprimer_annuler_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_annuler_label, "in_gestion_equipement_supprimer_annuler_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_rechercher_button, "in_gestion_equipement_supprimer_rechercher_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_rechercher_image, "in_gestion_equipement_supprimer_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, in_gestion_equipement_supprimer_supprimer_button, "in_gestion_equipement_supprimer_supprimer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment66, "alignment66");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox111, "hbox111");
@@ -3754,7 +3824,6 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_nblimite_spinbutton, "nl_gestion_centre_ajouter_nblimite_spinbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_ouverture_spinbutton, "nl_gestion_centre_ajouter_ouverture_spinbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_fermeture_button, "nl_gestion_centre_ajouter_fermeture_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, vseparator1, "vseparator1");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_liste_label, "nl_gestion_centre_ajouter_liste_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_liste_scrolledwindow, "nl_gestion_centre_ajouter_liste_scrolledwindow");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_liste_treeview, "nl_gestion_centre_ajouter_liste_treeview");
@@ -3763,19 +3832,21 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_ouverture_label, "nl_gestion_centre_ajouter_ouverture_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_fermeture_label, "nl_gestion_centre_ajouter_fermeture_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_horaire_label, "nl_gestion_centre_ajouter_horaire_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_nblimite_label, "nl_gestion_centre_ajouter_nblimite_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_type_label, "nl_gestion_centre_ajouter_type_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_activite_label, "nl_gestion_centre_ajouter_activite_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_localisation_comboboxentry, "nl_gestion_centre_ajouter_localisation_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_community_radiobutton, "nl_gestion_centre_ajouter_community_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_training_radiobutton, "nl_gestion_centre_ajouter_training_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_nblimite_label, "nl_gestion_centre_ajouter_nblimite_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_entrainement_checkbutton, "nl_gestion_centre_ajouter_entrainement_checkbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_defoulement_checkbutton, "nl_gestion_centre_ajouter_defoulement_checkbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, vseparator1, "vseparator1");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_community_radiobutton, "nl_gestion_centre_ajouter_community_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_training_radiobutton, "nl_gestion_centre_ajouter_training_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_localisation_comboboxentry, "nl_gestion_centre_ajouter_localisation_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_enregistrer_button, "nl_gestion_centre_ajouter_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment76, "alignment76");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox121, "hbox121");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_enregistrer_image, "nl_gestion_centre_ajouter_enregistrer_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_enregistrer_label, "nl_gestion_centre_ajouter_enregistrer_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_actualiser_button, "nl_gestion_centre_ajouter_actualiser_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_ajouter_label, "nl_gestion_centre_ajouter_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed60, "fixed60");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_nomcentre_entry, "nl_gestion_centre_modifier_nomcentre_entry");
@@ -3794,20 +3865,20 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_activite_label, "nl_gestion_centre_modifier_activite_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_rechercher_button, "nl_gestion_centre_modifier_rechercher_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_rechercher_image, "nl_gestion_centre_modifier_rechercher_image");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_ville_comboboxentry, "nl_gestion_centre_modifier_ville_comboboxentry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_community_radiobutton, "nl_gestion_centre_modifier_community_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_training_radiobutton, "nl_gestion_centre_modifier_training_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_entrainement_checkbutton, "nl_gestion_centre_modifier_entrainement_checkbutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_defoulement_checkbutton, "nl_gestion_centre_modifier_defoulement_checkbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, button144, "button144");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment79, "alignment79");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox124, "hbox124");
   GLADE_HOOKUP_OBJECT (espace_administratif, image116, "image116");
   GLADE_HOOKUP_OBJECT (espace_administratif, label736, "label736");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_entrainement_checkbutton, "nl_gestion_centre_modifier_entrainement_checkbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_defoulement_checkbutton, "nl_gestion_centre_modifier_defoulement_checkbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_community_radiobutton, "nl_gestion_centre_modifier_community_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_training_radiobutton, "nl_gestion_centre_modifier_training_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_ville_comboboxentry, "nl_gestion_centre_modifier_ville_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_modifier_label, "nl_gestion_centre_modifier_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed55, "fixed55");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_supprimer_rechercher_entry, "nl_gestion_centre_supprimer_rechercher_entry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_titre_supprimer_label, "nl_gestion_centre_titre_supprimer_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_supprimer_titre_label, "nl_gestion_centre_supprimer_titre_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_supprimer_rechercher_button, "nl_gestion_centre_supprimer_rechercher_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_supprimer_rechercher_image, "nl_gestion_centre_supprimer_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, nl_gestion_centre_supprimer_supprimer_button, "nl_gestion_centre_supprimer_supprimer_button");
@@ -3833,20 +3904,20 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_mois_spinbutton, "am_gestion_evenement_ajouter_mois_spinbutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_nomevenement_entry, "am_gestion_evenement_ajouter_nomevenement_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_minute_spinbutton, "am_gestion_evenement_ajouter_minute_spinbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_sport_radiobutton, "am_gestion_evenement_ajouter_sport_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_bienetre_radiobutton, "am_gestion_evenement_ajouter_bienetre_radiobutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_dateheure_label, "am_gestion_evenement_ajouter_dateheure_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_nutrition_radiobutton, "am_gestion_evenement_ajouter_nutrition_radiobutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_annee_label, "am_gestion_evenement_ajouter_annee_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_mois_label, "am_gestion_evenement_ajouter_mois_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, label870, "label870");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_heure_label, "am_gestion_evenement_ajouter_heure_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_centre_comboboxentry, "am_gestion_evenement_ajouter_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_id_label, "am_gestion_evenement_ajouter_id_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_nomevenement_label, "am_gestion_evenement_ajouter_nomevenement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_typeevenement_label, "am_gestion_evenement_ajouter_typeevenement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_jour_label, "am_gestion_evenement_ajouter_jour_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_centre_label, "am_gestion_evenement_ajouter_centre_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_sport_radiobutton, "am_gestion_evenement_ajouter_sport_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_nutrition_radiobutton, "am_gestion_evenement_ajouter_nutrition_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_bienetre_radiobutton, "am_gestion_evenement_ajouter_bienetre_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_centre_comboboxentry, "am_gestion_evenement_ajouter_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_ajouter_enregistrer_button, "am_gestion_evenement_ajouter_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment84, "alignment84");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox129, "hbox129");
@@ -3863,23 +3934,23 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_rechercher_entry, "am_gestion_evenement_modifier_rechercher_entry");
   GLADE_HOOKUP_OBJECT (espace_administratif, label871, "label871");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_minute_spinbutton, "am_gestion_evenement_modifier_minute_spinbutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_rechercher_button, "am_gestion_evenement_modifier_rechercher_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_rechercher_image, "am_gestion_evenement_modifier_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_nutrition_radiobutton, "am_gestion_evenement_modifier_nutrition_radiobutton");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_sport_radiobutton, "am_gestion_evenement_modifier_sport_radiobutton");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_heuredate_label, "am_gestion_evenement_modifier_heuredate_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_mois_label, "am_gestion_evenement_modifier_mois_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_annee_label, "am_gestion_evenement_modifier_annee_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, label872, "label872");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_heure_label, "am_gestion_evenement_modifier_heure_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_centre_comboboxentry, "am_gestion_evenement_modifier_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_rechercher_label, "am_gestion_evenement_modifier_rechercher_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_id_label, "am_gestion_evenement_modifier_id_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_nomevenement_label, "am_gestion_evenement_modifier_nomevenement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_typeevenement_label, "am_gestion_evenement_modifier_typeevenement_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_jour_label, "am_gestion_evenement_modifier_jour_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, label801, "label801");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_rechercher_button, "am_gestion_evenement_modifier_rechercher_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_rechercher_image, "am_gestion_evenement_modifier_rechercher_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_bienetre_radiobutton, "am_gestion_evenement_modifier_bienetre_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_sport_radiobutton, "am_gestion_evenement_modifier_sport_radiobutton");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_centre_comboboxentry, "am_gestion_evenement_modifier_centre_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_enregistrer_button, "am_gestion_evenement_modifier_enregistrer_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment85, "alignment85");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox130, "hbox130");
@@ -3888,20 +3959,20 @@ create_espace_administratif (void)
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_modifier_labe, "am_gestion_evenement_modifier_labe");
   GLADE_HOOKUP_OBJECT (espace_administratif, fixed63, "fixed63");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_id_entry, "am_gestion_evenement_supprimer_id_entry");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_rechercher_label, "am_gestion_evenement_supprimer_rechercher_label");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_id_label, "am_gestion_evenement_supprimer_id_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_rechercher_button, "am_gestion_evenement_supprimer_rechercher_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_rechercher_image, "am_gestion_evenement_supprimer_rechercher_image");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_supprimer_button, "am_gestion_evenement_supprimer_supprimer_button");
-  GLADE_HOOKUP_OBJECT (espace_administratif, alignment83, "alignment83");
-  GLADE_HOOKUP_OBJECT (espace_administratif, hbox128, "hbox128");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_supprimer_image, "am_gestion_evenement_supprimer_supprimer_image");
-  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_supprimer_label, "am_gestion_evenement_supprimer_supprimer_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_rechercher_label, "am_gestion_evenement_supprimer_rechercher_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_id_label, "am_gestion_evenement_supprimer_id_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_annuler_button, "am_gestion_evenement_supprimer_annuler_button");
   GLADE_HOOKUP_OBJECT (espace_administratif, alignment82, "alignment82");
   GLADE_HOOKUP_OBJECT (espace_administratif, hbox127, "hbox127");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_annuler_image, "am_gestion_evenement_supprimer_annuler_image");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_annuler_label, "am_gestion_evenement_supprimer_annuler_label");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_supprimer_button, "am_gestion_evenement_supprimer_supprimer_button");
+  GLADE_HOOKUP_OBJECT (espace_administratif, alignment83, "alignment83");
+  GLADE_HOOKUP_OBJECT (espace_administratif, hbox128, "hbox128");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_supprimer_image, "am_gestion_evenement_supprimer_supprimer_image");
+  GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_supprimer_label, "am_gestion_evenement_supprimer_supprimer_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_supprimer_label, "am_gestion_evenement_supprimer_label");
   GLADE_HOOKUP_OBJECT (espace_administratif, am_gestion_evenement_label, "am_gestion_evenement_label");
 
@@ -3943,6 +4014,7 @@ create_espace_membre (void)
   GtkWidget *em_gestion_cours_inscription_duree_spinbutton;
   GtkWidget *viewport1;
   GtkWidget *preview3;
+  GtkWidget *em_gestion_cours_inscription_title_label;
   GtkWidget *em_gestion_cours_inscription_listecours_label;
   GtkWidget *em_gestion_cours_inscription_listecours_comboboxentry;
   GtkWidget *em_gestion_cours_inscription_descriptioncours_label;
@@ -3963,7 +4035,6 @@ create_espace_membre (void)
   GtkWidget *hbox133;
   GtkWidget *em_gestion_cours_inscription_valider_image;
   GtkWidget *em_gestion_cours_inscription_valider_label;
-  GtkWidget *em_gestion_cours_inscription_title_label;
   GtkWidget *em_gestion_cours_inscription_label;
   GtkWidget *fixed68;
   GtkWidget *am_gestion_evenement_inscription_nom_entry;
@@ -4143,6 +4214,11 @@ create_espace_membre (void)
   gtk_widget_show (preview3);
   gtk_container_add (GTK_CONTAINER (viewport1), preview3);
 
+  em_gestion_cours_inscription_title_label = gtk_label_new (_("\342\234\246 S'inscrire \303\240 un Cours \342\234\246"));
+  gtk_widget_show (em_gestion_cours_inscription_title_label);
+  gtk_fixed_put (GTK_FIXED (fixed67), em_gestion_cours_inscription_title_label, 216, 16);
+  gtk_widget_set_size_request (em_gestion_cours_inscription_title_label, 248, 32);
+
   em_gestion_cours_inscription_listecours_label = gtk_label_new (_("La liste des cours :"));
   gtk_widget_show (em_gestion_cours_inscription_listecours_label);
   gtk_fixed_put (GTK_FIXED (fixed67), em_gestion_cours_inscription_listecours_label, 24, 56);
@@ -4236,11 +4312,6 @@ create_espace_membre (void)
   em_gestion_cours_inscription_valider_label = gtk_label_new_with_mnemonic (_("Valider le cours choisi"));
   gtk_widget_show (em_gestion_cours_inscription_valider_label);
   gtk_box_pack_start (GTK_BOX (hbox133), em_gestion_cours_inscription_valider_label, FALSE, FALSE, 0);
-
-  em_gestion_cours_inscription_title_label = gtk_label_new (_("\342\234\246 S'inscrire \303\240 un Cours \342\234\246"));
-  gtk_widget_show (em_gestion_cours_inscription_title_label);
-  gtk_fixed_put (GTK_FIXED (fixed67), em_gestion_cours_inscription_title_label, 216, 16);
-  gtk_widget_set_size_request (em_gestion_cours_inscription_title_label, 248, 32);
 
   em_gestion_cours_inscription_label = gtk_label_new (_("S'inscrire \303\240 un cours"));
   gtk_widget_show (em_gestion_cours_inscription_label);
@@ -4431,6 +4502,7 @@ create_espace_membre (void)
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_duree_spinbutton, "em_gestion_cours_inscription_duree_spinbutton");
   GLADE_HOOKUP_OBJECT (espace_membre, viewport1, "viewport1");
   GLADE_HOOKUP_OBJECT (espace_membre, preview3, "preview3");
+  GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_title_label, "em_gestion_cours_inscription_title_label");
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_listecours_label, "em_gestion_cours_inscription_listecours_label");
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_listecours_comboboxentry, "em_gestion_cours_inscription_listecours_comboboxentry");
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_descriptioncours_label, "em_gestion_cours_inscription_descriptioncours_label");
@@ -4451,7 +4523,6 @@ create_espace_membre (void)
   GLADE_HOOKUP_OBJECT (espace_membre, hbox133, "hbox133");
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_valider_image, "em_gestion_cours_inscription_valider_image");
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_valider_label, "em_gestion_cours_inscription_valider_label");
-  GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_title_label, "em_gestion_cours_inscription_title_label");
   GLADE_HOOKUP_OBJECT (espace_membre, em_gestion_cours_inscription_label, "em_gestion_cours_inscription_label");
   GLADE_HOOKUP_OBJECT (espace_membre, fixed68, "fixed68");
   GLADE_HOOKUP_OBJECT (espace_membre, am_gestion_evenement_inscription_nom_entry, "am_gestion_evenement_inscription_nom_entry");
@@ -5020,6 +5091,7 @@ create_login (void)
   GtkWidget *login_id_label;
   GtkWidget *login_msg_connexion;
   GtkWidget *login_password_label;
+  GtkWidget *login_msg_checkbutton;
   GtkWidget *login_mpoublie_button;
   GtkWidget *alignment95;
   GtkWidget *hbox144;
@@ -5030,7 +5102,6 @@ create_login (void)
   GtkWidget *hbox145;
   GtkWidget *login_connexion_image;
   GtkWidget *login_connexion_label;
-  GtkWidget *login_msg_checkbutton;
 
   login = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (GTK_WINDOW (login), _("login"));
@@ -5080,6 +5151,11 @@ create_login (void)
   gtk_widget_set_size_request (login_password_label, 152, 32);
   gtk_label_set_use_markup (GTK_LABEL (login_password_label), TRUE);
 
+  login_msg_checkbutton = gtk_check_button_new_with_mnemonic (_("Afficher le mot de passe"));
+  gtk_widget_show (login_msg_checkbutton);
+  gtk_fixed_put (GTK_FIXED (fixed72), login_msg_checkbutton, 8, 256);
+  gtk_widget_set_size_request (login_msg_checkbutton, 224, 40);
+
   login_mpoublie_button = gtk_button_new ();
   gtk_widget_show (login_mpoublie_button);
   gtk_fixed_put (GTK_FIXED (fixed72), login_mpoublie_button, 216, 232);
@@ -5123,11 +5199,6 @@ create_login (void)
   gtk_box_pack_start (GTK_BOX (hbox145), login_connexion_label, FALSE, FALSE, 0);
   gtk_label_set_use_markup (GTK_LABEL (login_connexion_label), TRUE);
 
-  login_msg_checkbutton = gtk_check_button_new_with_mnemonic (_("Afficher le mot de passe"));
-  gtk_widget_show (login_msg_checkbutton);
-  gtk_fixed_put (GTK_FIXED (fixed72), login_msg_checkbutton, 8, 256);
-  gtk_widget_set_size_request (login_msg_checkbutton, 224, 40);
-
   /* Store pointers to all widgets, for use by lookup_widget(). */
   GLADE_HOOKUP_OBJECT_NO_REF (login, login, "login");
   GLADE_HOOKUP_OBJECT (login, fixed72, "fixed72");
@@ -5138,6 +5209,7 @@ create_login (void)
   GLADE_HOOKUP_OBJECT (login, login_id_label, "login_id_label");
   GLADE_HOOKUP_OBJECT (login, login_msg_connexion, "login_msg_connexion");
   GLADE_HOOKUP_OBJECT (login, login_password_label, "login_password_label");
+  GLADE_HOOKUP_OBJECT (login, login_msg_checkbutton, "login_msg_checkbutton");
   GLADE_HOOKUP_OBJECT (login, login_mpoublie_button, "login_mpoublie_button");
   GLADE_HOOKUP_OBJECT (login, alignment95, "alignment95");
   GLADE_HOOKUP_OBJECT (login, hbox144, "hbox144");
@@ -5148,7 +5220,6 @@ create_login (void)
   GLADE_HOOKUP_OBJECT (login, hbox145, "hbox145");
   GLADE_HOOKUP_OBJECT (login, login_connexion_image, "login_connexion_image");
   GLADE_HOOKUP_OBJECT (login, login_connexion_label, "login_connexion_label");
-  GLADE_HOOKUP_OBJECT (login, login_msg_checkbutton, "login_msg_checkbutton");
 
   return login;
 }
