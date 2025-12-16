@@ -100,7 +100,9 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_glade_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	interface.$(OBJEXT) callbacks.$(OBJEXT) centre.$(OBJEXT)
+	interface.$(OBJEXT) callbacks.$(OBJEXT) centre.$(OBJEXT) \
+	equipement.$(OBJEXT) membre.$(OBJEXT) entraineur.$(OBJEXT) \
+	evenement.$(OBJEXT) cours.$(OBJEXT)
 glade_OBJECTS = $(am_glade_OBJECTS)
 am__DEPENDENCIES_1 =
 glade_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -282,7 +284,12 @@ glade_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	centre.c centre.h
+	centre.c centre.h \
+	equipement.c equipement.h \
+	membre.c membre.h \
+	entraineur.c entraineur.h \
+	evenement.c evenement.h \
+	cours.c cours.h
 
 glade_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 all: all-am
@@ -373,8 +380,13 @@ distclean-compile:
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/callbacks.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/centre.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/cours.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/entraineur.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/equipement.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/evenement.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/interface.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/main.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/membre.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/support.Po@am__quote@
 
 .c.o:

@@ -12,7 +12,12 @@ glade_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	centre.c centre.h
+	centre.c centre.h \
+	equipement.c equipement.h \
+	membre.c membre.h \
+	entraineur.c entraineur.h \
+	evenement.c evenement.h \
+	cours.c cours.h
 
 glade_LDADD = @PACKAGE_LIBS@ $(INTLLIBS)
 

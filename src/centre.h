@@ -17,23 +17,23 @@ typedef struct
 
 enum
 {
-	ID,
-	NOM,
+	ID_CENTRE,
+	NOM_CENTRE,
 	VILLE,
 	HORAIRE_OUVERTURE,
 	HORAIRE_FERMETURE,
 	MEMBRE_LIMIT,
 	TYPE,
 	ACTIVITES,
-	COLUMNS
+	COLUMNS_CENTRE
 };
 
-int ajouter(char *f, centre c);
-int modifier(char *f, int id, centre c);
-int supprimer(char *f, int id);
-centre chercher(char *f, int id);
-int inscription(char *f2, int c_id, int e_id);
-void afficher(GtkWidget *liste);
-void vider(GtkWidget *liste);
+int ajouter_centre(char *f, centre c);
+int modifier_centre(char *f, int id, centre c);
+int supprimer_centre(char *f, int id);
+centre chercher_centre(char *f, int id);
+int inscription_centre(char *f2, int c_id, int e_id);
+void afficher_centre(GtkWidget *liste);
+void vider_centre(GtkWidget *liste);
 
 #endif  //CENTRE_H_INCLUDED

@@ -1,6 +1,6 @@
 #include "equipement.h"
 #include <stdio.h>
-int ajouter(char *filename, equipement e)
+int ajouter_equipement(char *filename, equipement e)
 {
 	FILE *f = fopen(filename, "a+");
 	if(f!=NULL)
@@ -18,7 +18,7 @@ int ajouter(char *filename, equipement e)
 	}
 	return 0;
 }
-int modifier(char *filename, int id, equipement nouv)
+int modifier_equipement(char *filename, int id, equipement nouv)
 {
 	int tr=0;
 	equipement e;
@@ -48,7 +48,7 @@ int modifier(char *filename, int id, equipement nouv)
 	return tr;
 }
 
-int supprimer(char *filename, int id)
+int supprimer_equipement(char *filename, int id)
 {
 	int tr = 0;
 	equipement e;
@@ -77,7 +77,7 @@ int supprimer(char *filename, int id)
 	return tr;
 }
 
-equipement chercher(char *filename, int id)
+equipement chercher_equipement(char *filename, int id)
 {
 	equipement e;
 	int tr = 0;
@@ -102,7 +102,7 @@ equipement chercher(char *filename, int id)
 
 
 
-void afficher(GtkWidget *liste)
+void afficher_equipement(GtkWidget *liste)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -116,11 +116,11 @@ void afficher(GtkWidget *liste)
 	if(store == NULL)
 	{
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes("id", renderer, "text", ID, NULL);
+		column = gtk_tree_view_column_new_with_attributes("id", renderer, "text", ID_EQUIPEMENT, NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes("nom", renderer, "text", NOM, NULL);
+		column = gtk_tree_view_column_new_with_attributes("nom", renderer, "text", NOM_EQUIPEMENT, NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 		renderer = gtk_cell_renderer_text_new();
@@ -148,7 +148,7 @@ void afficher(GtkWidget *liste)
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 	}
-	store = gtk_list_store_new(COLUMNS, G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
+	store = gtk_list_store_new(COLUMNS_EQUIPEMENT, G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
 		
 	f = fopen("equipement.txt", "r");
 
@@ -163,7 +163,7 @@ void afficher(GtkWidget *liste)
 			     &e.mois_achat, &e.jour_achat, &e.etat, &e.quantite) != EOF)
 		{
 			gtk_list_store_append(store, &iter);
-			gtk_list_store_set(store, &iter, ID, e.id, NOM, e.nom, CATEGORIE, e.categorie, ANNEE_ACHAT, e.annee_achat, MOIS_ACHAT, e.mois_achat, JOUR_ACHAT, e.jour_achat, ETAT, e.etat, QUANTITE, e.quantite, -1);
+			gtk_list_store_set(store, &iter, ID_EQUIPEMENT, e.id, NOM_EQUIPEMENT, e.nom, CATEGORIE, e.categorie, ANNEE_ACHAT, e.annee_achat, MOIS_ACHAT, e.mois_achat, JOUR_ACHAT, e.jour_achat, ETAT, e.etat, QUANTITE, e.quantite, -1);
 		}
 		fclose(f);
 		gtk_tree_view_set_model(GTK_TREE_VIEW(liste), GTK_TREE_MODEL(store));

@@ -100,7 +100,9 @@ CONFIG_CLEAN_VPATH_FILES =
 am__installdirs = "$(DESTDIR)$(bindir)"
 PROGRAMS = $(bin_PROGRAMS)
 am_glade_OBJECTS = main.$(OBJEXT) support.$(OBJEXT) \
-	interface.$(OBJEXT) callbacks.$(OBJEXT) centre.$(OBJEXT)
+	interface.$(OBJEXT) callbacks.$(OBJEXT) centre.$(OBJEXT) \
+	equipement.$(OBJEXT) membre.$(OBJEXT) entraineur.$(OBJEXT) \
+	evenement.$(OBJEXT) cours.$(OBJEXT)
 glade_OBJECTS = $(am_glade_OBJECTS)
 am__DEPENDENCIES_1 =
 glade_DEPENDENCIES = $(am__DEPENDENCIES_1)
@@ -282,7 +284,12 @@ glade_SOURCES = \
 	support.c support.h \
 	interface.c interface.h \
 	callbacks.c callbacks.h \
-	centre.c centre.h
+	centre.c centre.h \
+	equipement.c equipement.h \
+	membre.c membre.h \
+	entraineur.c entraineur.h \
+	evenement.c evenement.h \
+	cours.c cours.h
 
 glade_LDADD = -lgtk-x11-2.0 -lgdk-x11-2.0 -lpangocairo-1.0 -latk-1.0 -lcairo -lgdk_pixbuf-2.0 -lgio-2.0 -lpangoft2-1.0 -lpango-1.0 -lgobject-2.0 -lglib-2.0 -lfontconfig -lfreetype $(INTLLIBS)
 all: all-am
@@ -373,8 +380,13 @@ distclean-compile:
 
 include ./$(DEPDIR)/callbacks.Po
 include ./$(DEPDIR)/centre.Po
+include ./$(DEPDIR)/cours.Po
+include ./$(DEPDIR)/entraineur.Po
+include ./$(DEPDIR)/equipement.Po
+include ./$(DEPDIR)/evenement.Po
 include ./$(DEPDIR)/interface.Po
 include ./$(DEPDIR)/main.Po
+include ./$(DEPDIR)/membre.Po
 include ./$(DEPDIR)/support.Po
 
 .c.o:

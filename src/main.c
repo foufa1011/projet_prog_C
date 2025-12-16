@@ -37,15 +37,15 @@ main (int argc, char *argv[])
    * (except popup menus), just so that you see something after building
    * the project. Delete any components that you don't want shown initially.
    */
-  espace_administratif = create_espace_administratif ();
+  /*espace_administratif = create_espace_administratif ();
   gtk_widget_show (espace_administratif);
-  /*espace_membre = create_espace_membre ();
+  espace_membre = create_espace_membre ();
   gtk_widget_show (espace_membre);
   espace_entraineur = create_espace_entraineur ();
-  gtk_widget_show (espace_entraineur);
+  gtk_widget_show (espace_entraineur);*/
   login = create_login ();
   gtk_widget_show (login);
-  dialog1 = create_dialog1 ();
+  /*dialog1 = create_dialog1 ();
   gtk_widget_show (dialog1);*/
 
   gtk_main ();

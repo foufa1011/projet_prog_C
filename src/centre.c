@@ -1,6 +1,6 @@
 #include "centre.h"
 #include <stdio.h>
-int ajouter(char *filename, centre c)
+int ajouter_centre(char *filename, centre c)
 {
 	FILE *f = fopen(filename, "a+");
 	if(f!=NULL)
@@ -18,7 +18,7 @@ int ajouter(char *filename, centre c)
 	}
 	return 0;
 }
-int modifier(char *filename, int id, centre nouv)
+int modifier_centre(char *filename, int id, centre nouv)
 {
 	int tr=0;
 	centre c;
@@ -48,7 +48,7 @@ int modifier(char *filename, int id, centre nouv)
 	return tr;
 }
 
-int supprimer(char *filename, int id)
+int supprimer_centre(char *filename, int id)
 {
 	int tr = 0;
 	centre c;
@@ -77,7 +77,7 @@ int supprimer(char *filename, int id)
 	return tr;
 }
 
-centre chercher(char *filename, int id)
+centre chercher_centre(char *filename, int id)
 {
 	centre c;
 	int tr = 0;
@@ -100,7 +100,7 @@ centre chercher(char *filename, int id)
 	return c;
 }
 
-int inscription(char *filename, int centre_id, int entraineur_id)
+int inscription_centre(char *filename, int centre_id, int entraineur_id)
 {
 	FILE *f = fopen(filename, "a");
 	if(f != NULL)
@@ -114,7 +114,7 @@ int inscription(char *filename, int centre_id, int entraineur_id)
 
 
 
-void afficher(GtkWidget *liste)
+void afficher_centre(GtkWidget *liste)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -128,11 +128,11 @@ void afficher(GtkWidget *liste)
 	if(store == NULL)
 	{
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes("id", renderer, "text", ID, NULL);
+		column = gtk_tree_view_column_new_with_attributes("id", renderer, "text", ID_CENTRE, NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes("nom", renderer, "text", NOM, NULL);
+		column = gtk_tree_view_column_new_with_attributes("nom", renderer, "text", NOM_CENTRE, NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 		renderer = gtk_cell_renderer_text_new();
@@ -160,7 +160,7 @@ void afficher(GtkWidget *liste)
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 	}
-	store = gtk_list_store_new(COLUMNS, G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
+	store = gtk_list_store_new(COLUMNS_CENTRE, G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
 		
 	f = fopen("centre.txt", "r");
 
@@ -175,7 +175,7 @@ void afficher(GtkWidget *liste)
 		     &c.horaire_fermeture, &c.membre_limit, &c.type, &c.activites) != EOF)
 		{
 			gtk_list_store_append(store, &iter);
-			gtk_list_store_set(store, &iter, ID, c.id, NOM, c.nom, VILLE, c.ville, HORAIRE_OUVERTURE, c.horaire_ouverture, HORAIRE_FERMETURE, c.horaire_fermeture, MEMBRE_LIMIT, c.membre_limit, TYPE, c.type, ACTIVITES, c.activites, -1);
+			gtk_list_store_set(store, &iter, ID_CENTRE, c.id, NOM_CENTRE, c.nom, VILLE, c.ville, HORAIRE_OUVERTURE, c.horaire_ouverture, HORAIRE_FERMETURE, c.horaire_fermeture, MEMBRE_LIMIT, c.membre_limit, TYPE, c.type, ACTIVITES, c.activites, -1);
 		}
 		fclose(f);
 		gtk_tree_view_set_model(GTK_TREE_VIEW(liste), GTK_TREE_MODEL(store));
@@ -183,7 +183,7 @@ void afficher(GtkWidget *liste)
 	}
 }
 
-void vider(GtkWidget *liste)
+void vider_centre(GtkWidget *liste)
 {
 	GtkCellRenderer *renderer;
 	GtkTreeViewColumn *column;
@@ -197,11 +197,11 @@ void vider(GtkWidget *liste)
 	if(store == NULL)
 	{
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes("id", renderer, "text", ID, NULL);
+		column = gtk_tree_view_column_new_with_attributes("id", renderer, "text", ID_CENTRE, NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 		renderer = gtk_cell_renderer_text_new();
-		column = gtk_tree_view_column_new_with_attributes("nom", renderer, "text", NOM, NULL);
+		column = gtk_tree_view_column_new_with_attributes("nom", renderer, "text", NOM_CENTRE, NULL);
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 		renderer = gtk_cell_renderer_text_new();
@@ -229,7 +229,7 @@ void vider(GtkWidget *liste)
 		gtk_tree_view_append_column(GTK_TREE_VIEW(liste), column);
 
 	}
-	store = gtk_list_store_new(COLUMNS, G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
+	store = gtk_list_store_new(COLUMNS_CENTRE, G_TYPE_INT, G_TYPE_STRING, G_TYPE_STRING, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT, G_TYPE_INT);
 	gtk_tree_view_set_model(GTK_TREE_VIEW(liste), GTK_TREE_MODEL(store));
 	g_object_unref(store);
 }

@@ -1,0 +1,3 @@
+membre membre 0
+entraineur entraineur 1
+admin admin 2
