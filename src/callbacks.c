@@ -375,11 +375,14 @@ on_in_gestion_equipement_ajouter_enregistrer_button_clicked
 	GtkWidget *quantite = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_qtdispo_spinbutton");
 	e.quantite = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(quantite));
 
-	int year, month, day;
+	GtkWidget *jour_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_dateachat_jour_spinbutton");
+	e.jour_achat = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(jour_input));
 
-	GtkWidget *calendar = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_dateachat_calendar");
+	GtkWidget *mois_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_dateachat_mois_spinbutton");
+	e.mois_achat = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(mois_input));
 
-	gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
+	GtkWidget *annee_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_dateachat_annee_spinbutton");
+	e.annee_achat = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(annee_input));
 
 	e.etat = etat;
 	etat = 1;
@@ -446,6 +449,15 @@ on_in_gestion_equipement_modifier_rechercher_button_clicked
 	GtkWidget *quantite_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_qtdispo_spinbutton");
 	gtk_spin_button_set_value(GTK_SPIN_BUTTON(quantite_input), e.quantite);
 
+	GtkWidget *jour_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_dateachat_jour_spinbutton");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(jour_input), e.jour_achat);
+
+	GtkWidget *mois_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_dateachat_mois_spinbutton");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(mois_input), e.mois_achat);
+
+	GtkWidget *annee_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_dateachat_annee_spinbutton");
+	gtk_spin_button_set_value(GTK_SPIN_BUTTON(annee_input), e.annee_achat);
+
 	GtkWidget *etat_disponible_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_disponible_radiobutton");
 	if(e.etat == 1)
 		gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(etat_disponible_input), TRUE);
@@ -484,6 +496,15 @@ on_in_gestion_equipement_modifier_enregistrer_button_clicked
 
 	GtkWidget *quantite = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_qtdispo_spinbutton");
 	e.quantite = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(quantite));
+
+	GtkWidget *jour_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_dateachat_jour_spinbutton");
+	e.jour_achat = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(jour_input));
+
+	GtkWidget *mois_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_dateachat_mois_spinbutton");
+	e.mois_achat = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(mois_input));
+
+	GtkWidget *annee_input = lookup_widget(objet_graphique, "in_gestion_equipement_modifier_dateachat_annee_spinbutton");
+	e.annee_achat = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(annee_input));
 
 	e.etat = etat;
 	etat = 1;
@@ -1566,25 +1587,7 @@ on_in_gestion_equipement_reservation_valider_button_clicked
                                         (GtkButton       *button,
                                         gpointer         user_data)
 {
-	e.id = 0;
 
-	GtkWidget *nom_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_nomequipement_entry");
-	strcpy(e.nom,gtk_entry_get_text(GTK_ENTRY(nom_input)));
-
-        GtkWidget *categorie_input = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_categorie_comboboxentry");
-	strcpy(e.categorie,gtk_combo_box_get_active_text(GTK_COMBO_BOX(categorie_input)));
-
-	GtkWidget *quantite = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_qtdispo_spinbutton");
-	e.quantite = gtk_spin_button_get_value_as_int(GTK_SPIN_BUTTON(quantite));
-
-	int year, month, day;
-
-	GtkWidget *calendar = lookup_widget(objet_graphique, "in_gestion_equipement_ajouter_dateachat_calendar");
-
-	gtk_calendar_get_date(GTK_CALENDAR(calendar), &year, &month, &day);
-
-	e.etat = etat;
-	etat = 1;
 
 
 }
